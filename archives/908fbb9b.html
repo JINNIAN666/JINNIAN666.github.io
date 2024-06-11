@@ -1,0 +1,1606 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+ <!-- 后加弹窗html开始-->
+<div id="welcomePopup" style="display: block; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 9999; text-align: center;">
+    <h2>埃隆马斯克-科技资讯-JinNianX</h2>
+    <p>点击以下链接进入：<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.elonmusk.cn/" style="color: #007bff; text-decoration: underline;">https://www.elonmusk.cn/</a></p>
+    <button id="closeButton" style="background-color: #007bff; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">关闭</button>
+</div>
+ <!-- 后加弹窗html结束-->
+
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="AxureRP,瑾年的学习记录">
+    <meta name="description" content="分享每天学到的各类前沿技术，与学习中遇到的问题，供大家学习交流。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>AxureRP8.0 | 瑾年-JinNianX-瑾年的学习记录</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img style="z-index:1" src="/medias/logo.png" class="logo-img" alt="logo"logo title="深呼吸，冥想，你能看多远还是蒙了眼;Dont't Panic,大胆做你所想;纠结没意思，Let yourself go，Just do it，Is that a compromise？Experience the journey of life.">
+                    
+                    <span class="logo-span" title="0-X,体验这场旅途;一切都在改变,唯有意识。">瑾年</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">瑾年-JinNianX-瑾年的学习记录</div>
+        <div class="logo-desc">
+            
+            分享每天学到的各类前沿技术，与学习中遇到的问题，供大家学习交流。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/JINNIAN666" rel="external nofollow noreferrer" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/JINNIAN666" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('当前为私密页面，请联系站长获取密码。')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">AxureRP8.0</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/AxureRP/">
+                                <span class="chip bg-color">AxureRP</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/UI%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                UI设计
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-09-23
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-03-28
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    15 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="AxureRP8-0的基础教程"><a href="#AxureRP8-0的基础教程" class="headerlink" title="AxureRP8.0的基础教程"></a>AxureRP8.0的基础教程</h1><p>axurerp8/9较难，但是能实现更复杂的功能，如果想快速写一个网站或者app原型，可以使用墨刀。</p>
+<h2 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h2><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109231742913.png"></p>
+<p>干嘛的？</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109231745747.png"></p>
+<p>基本词汇</p>
+<p>1-低保真-就是比草稿图高级一些的设计稿，也叫线框图（黑白灰）</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109231753977.png"></p>
+<p>2-高保真-在低保真的基础是，把页面加上色彩等，还原成用户看到的真实页面，也叫设计稿。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109231754524.png"></p>
+<p><mark>如何汉化？</mark></p>
+<p>打开参考资料的网盘，axurexp8.0与汉化包都在，将lang文件拖到axture的安装目录</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109242015345.png"></p>
+<h2 id="软件组成"><a href="#软件组成" class="headerlink" title="软件组成"></a>软件组成</h2><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109242012510.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109242017738.png"></p>
+<p>样式中可以调控件的相关属性，预览效果点发布或者预览</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109242103094.png"></p>
+<p>点空白处可以添加背景图片，背景图片也有很多属性选择，比如是重复还是填充还是水平重复等</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109242105941.png"></p>
+<h2 id="案列"><a href="#案列" class="headerlink" title="案列"></a>案列</h2><h3 id="163邮箱登入案例"><a href="#163邮箱登入案例" class="headerlink" title="163邮箱登入案例"></a>163邮箱登入案例</h3><pre class="line-numbers language-none"><code class="language-none">http:&#x2F;&#x2F;iconfont.cn图标库
+ctrl+z也可返回上一步操作
+按住ctrl加点击元件选中，调节居中对齐，左右对齐等
+选中多个元件，按下ctrl+g或者右键选择组合，可把多个元件组合到一起
+在更多里面有裁剪，去除图片等不用的部分
+颜色里面有析取颜色的笔，可析取屏幕上任意颜色
+当你嫌麻烦不想做，可以直接复制图片上去代替元件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109251206943.png"></p>
+<p>shift+点击可同时选择多个控件</p>
+<p>选择元件，上下左右键可调整元件的x，y轴位置（一个单位），按住shift+上下左右，一次可移动10个单位。</p>
+<p>ctrl+拖拽控件可复制一个一模一样的控件</p>
+<h3 id="安卓机器人图标"><a href="#安卓机器人图标" class="headerlink" title="安卓机器人图标"></a>安卓机器人图标</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109251344828.png"></p>
+<p>结合分开，合并去除，相交等是元件中的布尔运算。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109251553482.png"></p>
+<p>右键元件里有交互功能设置</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109251745367.png"></p>
+<p>case事件是可以直接复制粘贴到另一个元件中的</p>
+<p>元件中的一个变化（比如用户鼠标点击）可以添加多个事件case（如显示与隐藏），但是必须有条件判断，无条件判断则只能设置一个case（可以把多个动作放到一个case中），否则会提示用户选择case。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109261915719.png"></p>
+<p>可以看到在属性里鼠标单击有两个case</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109261915895.png"></p>
+<h3 id="充值页面"><a href="#充值页面" class="headerlink" title="充值页面"></a>充值页面</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109262002376.png"></p>
+<p>选中可多次使用，如何是禁用，则进行第一次case后，后续动作都无效。</p>
+<h3 id="tab切换"><a href="#tab切换" class="headerlink" title="tab切换"></a>tab切换</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271308611.png"></p>
+<p><mark>一定要注意理解元件的层次，上一层的元件会覆盖下一层的元件</mark></p>
+<p>1-在最底层加一个红色的矩形</p>
+<p>2-倒数第二层加白色矩形作为选中滑块</p>
+<p>3-再上一层添加矩形，填写文字（设置交互选中状态字体变红）</p>
+<p>4-添加热区在最上层，点击热区（添加交互，点击则选中对应文字矩形，文字矩形中字体也就变红，再添加让滑块移动到指定位置）</p>
+<p>5-将三个矩形设置选中项</p>
+<p>ps：第一个矩形开始即要在属性栏设置为选中状态，不然无法变色。</p>
+<h3 id="二级菜单"><a href="#二级菜单" class="headerlink" title="二级菜单"></a>二级菜单</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271551686.png"></p>
+<p>1-创造两个矩形，一个作为menue一个作为submenu</p>
+<p>2-将矩形打成一个组合</p>
+<p>3-给组合添加事件，鼠标移入显示子菜单矩形，移出隐藏即可。</p>
+<h3 id="广告载入"><a href="#广告载入" class="headerlink" title="广告载入"></a>广告载入</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271556916.png"></p>
+<p><mark>case中的动作是分步执行的，先执行最先添加的，再执行后面的</mark></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271606956.png"></p>
+<p>步骤</p>
+<p>1-设置主页面，也就是软件页面（设置元件载入，主页面载入自动弹出广告元件）</p>
+<p>ps:尽量使用元件载入时，不要使用页面使用时，因为页面使用时，无法直接复制粘贴case。</p>
+<p>2-设置遮挡，纯黑色，透明的调成百分之50（起到软件弹广告主页面一般会变暗作用）</p>
+<p>3-设置广告</p>
+<p>4-设置关闭广告按键（设置点击事件，点击将广告，遮挡，与关闭广告键全部隐藏）</p>
+<h3 id="广告轮播"><a href="#广告轮播" class="headerlink" title="广告轮播"></a>广告轮播</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271641107.png"></p>
+<p>1-设置广告图片三张并命名好识别</p>
+<p>2-设置三个圆点（用元件椭圆形，按住shift可以等比缩小，就不会变成椭圆）</p>
+<p>3-圆点设置初始颜色，第一个默认选中，设置选中交互变色（用于区分当前选中那个圆点）</p>
+<p>4-设置圆点点击事件（将对应图片至于顶层，再将三个圆点置顶）</p>
+<p>5-把三个圆点设置选项组（作用是选中一个圆点，另外两个圆点默认不选中）</p>
+<h3 id="path展开与收缩"><a href="#path展开与收缩" class="headerlink" title="path展开与收缩"></a>path展开与收缩</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271956560.png"></p>
+<p>这里可以自己创建一个初始模板，类似idea的代码初始模板，一打开自动生成这个初始页面。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271920417.png"></p>
+<p>1-将主页面图片拉上去</p>
+<p>2-将五个图标移动到主页面图层下面</p>
+<p>3-用椭圆元件制作主菜单，椭圆内打一个+号，点击主菜单弹出那五个图标，用鼠标点击移动事件即可（提前记录好坐标）</p>
+<p>4-椭圆设置点击旋转45度，达到识别效果，再复制一个椭圆2点击椭圆1则将椭圆2置顶，点椭圆2则将椭圆1置顶，点击椭圆2则五个图标移动收回到原坐标</p>
+<h3 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271936268.png"></p>
+<p>当有判断条件，可以出现多个case</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271948497.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109271948039.png"></p>
+<p>1-使用表单元件，下拉列表框</p>
+<p>2-添加三个选项</p>
+<p>3-给下拉列表框添加点击事件，三个case分别将对应图片置顶图层即可</p>
+<h3 id="账号密码登入判断"><a href="#账号密码登入判断" class="headerlink" title="账号密码登入判断"></a>账号密码登入判断</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109272031369.png"></p>
+<p>1-首先用两个文本框，在属性中给予提示句（请输入账号和请输入密码）</p>
+<p>2-添加两个文本段落，提示失败和成功，在未登入前都隐藏。</p>
+<p>2-再用按钮元件，写判断条件，成立则显示登入成功，不成立则显示失败。</p>
+<h2 id="动态面板是什么？"><a href="#动态面板是什么？" class="headerlink" title="动态面板是什么？"></a>动态面板是什么？</h2><p><mark>作用是app页面间的无缝跳转，如从登入页面跳转到软件首页</mark></p>
+<p>动态面板都从坐标0.0开始</p>
+<p>只有页面和动态面板才有拖动事件</p>
+<p>建议不勾选自动调整尺寸大小</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109272256058.png"></p>
+<p>通俗说，动态面板最上层的有穿透性，可以控制动态面板外的元件，<mark>在主页面也只显示动态面板最上层的层级</mark>，动态面板各层级间互不影响，它的作用是实现动态页面里面的层级页面跳转（通过设置页面状态动作），从而让app页面跳转更加连贯。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109272305779.png"></p>
+<p>预览后state2是不显示在主页的</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109272306873.png"></p>
+<h2 id="动态面板案例"><a href="#动态面板案例" class="headerlink" title="动态面板案例"></a>动态面板案例</h2><h3 id="登入升级版（动态页面层级跳转）"><a href="#登入升级版（动态页面层级跳转）" class="headerlink" title="登入升级版（动态页面层级跳转）"></a>登入升级版（动态页面层级跳转）</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109272325061.png"></p>
+<p>将登入的事件添加鼠标点击，则将zhuye层级调到最前显示（即设置状态的动态面板）</p>
+<h3 id="轮播"><a href="#轮播" class="headerlink" title="轮播"></a>轮播</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110081513303.png"></p>
+<p>1-将三张图片设置为动态面板的三个state</p>
+<p>2-设置三个椭圆元件，设置点击事件，点击后选中椭圆（再设置选中变红的交互），并将对应state面板状态</p>
+<p>3-设置下一张与上一张元件，并隐藏（用户鼠标移入再显示），通过载入事件隐藏，移入事件显示</p>
+<p><mark>升级版</mark></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110081516016.png"></p>
+<p>区别：椭圆元件也通过设置动态面板状态实现</p>
+<p>1-将三个椭圆设置为一个动态面板，三个state对应三张图片的三个state</p>
+<p>2-其余的大同小异</p>
+<p>3-设置画面自动转换选中case中状态面板的向前，后循环即可，dots无需动画，下一张选向左移入，上一张相反。</p>
+<p>注意：上一张与下一张的元件要建立在主动态面板的state1上，不然图片一转换，元件都没了，充分理解各元件在那一层。</p>
+<h3 id="抽屉导航"><a href="#抽屉导航" class="headerlink" title="抽屉导航"></a>抽屉导航</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110082012451.png"></p>
+<p>1-做好首页面，一个矩形，再加上一个红矩形做状态栏，再加上爱心标记，并都选中设置动态面板</p>
+<p>2-将导航页面x轴设置为-280，点击爱心，弹出灰色遮罩，移动导航页面到x0，y0</p>
+<p>3-设置点击页面，导航x再移动到-280，隐藏遮罩</p>
+<p>4-利用一个矩形先隐藏，和导航页面一起选中设置动态面板，设置拖动事件，拖动则动态面板x到-280，实现左拖动返回。</p>
+<p>ps：注意遮罩等与其他元件的先后层级顺序，如何遮罩在运行后在所以元件上方，那后面就直接无法运行了。</p>
+<h3 id="带判断条件的抽屉导航"><a href="#带判断条件的抽屉导航" class="headerlink" title="带判断条件的抽屉导航"></a>带判断条件的抽屉导航</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110100950585.png"></p>
+<p>1-设置两个矩形元件分别做为主页面和导航页面，并一起设置为动态面板</p>
+<p>2-因为要有拖动事件，所以必须是页面或者动态面板，所以把主页面蓝色设置一个动态面板</p>
+<p>3-设置拖动事件</p>
+<p>4-设置左上角矩形为菜单，点击则跳出导航页，设置点击事件即可。</p>
+<p>5-再设置一个矩形文字为红色，当点击左上角矩形，先判断文字是红则主页面动态面板移动（右移），则显示出了导航页，再设置矩形文字为绿，设置判断，如果文字是绿，则面板移动回去，挡住导航页。</p>
+<p>ps：设置好动态面板的名字，防止选择错页面，导致错误，记好动态面板原xy位置</p>
+<p><mark>与上一个区别是，这个可以点击菜单栏返回</mark></p>
+<h3 id="苹果手机接听页面"><a href="#苹果手机接听页面" class="headerlink" title="苹果手机接听页面"></a>苹果手机接听页面</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110101023795.png"></p>
+<p>1-分别设置接听页面图片，挂断页面图片，电话图标图片，滑动接听文字图片</p>
+<p>2-将四元件打成动态面板，再将电话图片打成动态面板（需要拖动事件，必须面板或者页面）</p>
+<p>3-在电话两边设置两面墙，电话移动时碰撞到右墙则设置事件动态面板跳转到挂断图片，左墙则电话回到拖动原位置（防止电话图标出左界，必须通过移动时事件设置，不能通过拖动时，因为拖动是用户操作，不能这样交互事件与元件）</p>
+<p>ps：通过设置case条件，元件范围，接触。</p>
+<p>墙体不能隐藏，因为隐藏则无法接触，将透明度都设置为0即可</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110101031367.png"></p>
+<p>4-设置拖动结束，电话图标会到原位置（防止图标停在中间，与苹果手机接听实际不符，不美观）</p>
+<p>5-设置拖动时，”滑动来接听文字“逐渐隐藏（3000ms左右）</p>
+<h3 id="动画轮播"><a href="#动画轮播" class="headerlink" title="动画轮播"></a>动画轮播</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110101215629.png"></p>
+<p>1-设置点击下一张上一张元件轮播动态面板状态</p>
+<p>2-新知识，动态面板状态改变时事件case，设置隐藏和等待</p>
+<p>3-再设置动态面板的左右拖动事件，轮播动画。</p>
+<h3 id="猎豹游览器"><a href="#猎豹游览器" class="headerlink" title="猎豹游览器"></a>猎豹游览器</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110101941825.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110101945044.png"></p>
+<h2 id="病态效果"><a href="#病态效果" class="headerlink" title="病态效果"></a>病态效果</h2><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110102022568.png"></p>
+<p><mark>简而言之，就是死循环的意思，比如先一个正方形元件，设置点击则移动x的10个单位，然后再设置元件移动时事件，则出现一个死循环</mark></p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110102127698.png"></p>
+<p>新知识：</p>
+<p>1-跳转内页，case里有打开链接选项，选择你要打开的页面即可</p>
+<p>2-全局变量，当页面跳转后，控件就会刷新回到初始页面，怎么保持先前的变化呢？用全局变量</p>
+<p>在case中可以设置。</p>
+<p>3-首先点击蓝色，设置动态面板状态为蓝色页，红色同理（看见页面转换就想到动态面板），并分别设置变量值为red和blue</p>
+<p>4-设置载入时事件，加case判断变量是blue就设置动态面板状态为蓝色，red则红色，于是实现了先前变化的保存。</p>
+<h3 id="局部变量和函数"><a href="#局部变量和函数" class="headerlink" title="局部变量和函数"></a>局部变量和函数</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110111713132.png"></p>
+<p>点击fx跳出内置的函数选择，也可以自己写函数，局部变量独立于一个元件，记录它的状态等。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110111747793.png"></p>
+<p>获取日期等函数可加条件判断，如果函数值等于多少，则将元件文本修改为自定义内容等。其他函数同理</p>
+<h3 id="获取实时时间"><a href="#获取实时时间" class="headerlink" title="获取实时时间"></a>获取实时时间</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110112303724.png"></p>
+<p>1-设置两个矩形打成动态面板</p>
+<p>2-设置载入时动态面板循环（再设置一次元件文字等于当前时间函数，防止打开页面第一瞬间没记录时间）</p>
+<p>3-设置面板状态时case，分别赋予动态面板的两个state时间即可（面板1s改变一次，也获取1s时间）</p>
+<p><mark>方法二</mark></p>
+<p>利用病态效果循环</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110112327201.png"></p>
+<p>1-设置一个文本框（只有文本框有文字改变时事件）</p>
+<p>2-设置载入获取事件赋予文本框</p>
+<p>3-设置文本改变时事件，再获取赋予，形成循环。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><pre class="line-numbers language-py" data-language="py"><code class="language-py">https:&#x2F;&#x2F;www.axure.com.cn&#x2F;5068函数指南大全<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="元件函数"><a href="#元件函数" class="headerlink" title="元件函数"></a>元件函数</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141915177.png"></p>
+<p>1-创建一个元件</p>
+<p>2-设置点击事件</p>
+<p>3-点击fx选择函数</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141916573.png"></p>
+<p>4-设置你想要的，这里有很多，如上图的this.windth就是将元件文字设置为窗口宽度</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141917869.png"></p>
+<h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141919102.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141919602.png"></p>
+<h3 id="进度条制作"><a href="#进度条制作" class="headerlink" title="进度条制作"></a>进度条制作</h3><p>利用病态效果</p>
+<p>1-设置一个矩形作为加载条</p>
+<p>2-设置上传按钮，设置点击事件，改变矩形尺寸<mark>因为设置数值的话，就固定了无法修改，所以利用函数设置，每次加1</mark></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141927419.png"></p>
+<p>3-设置矩形（加载条）尺寸改变时事件，和上传点击事件形成循环</p>
+<p>4-添加条件，当尺寸大于一定值就停止，防止出界。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141930747.png"></p>
+<p>5-病态效果循环记得设置等待，不然会出问题，毕竟axure不是全能</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141935852.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141936888.png"></p>
+<h3 id="动态面板的两个特性"><a href="#动态面板的两个特性" class="headerlink" title="动态面板的两个特性"></a>动态面板的两个特性</h3><p>滚动条与页面固定</p>
+<p>滚动条就是可以向下滑动显示为显示的文字等，固定就是此元件不会随页面滑动消失，一直是在顶层显示。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141948153.png"></p>
+<p>1-此操作都需要将元件转为动态面板</p>
+<p>2-首先创造一个元件，打为动态面板，再右击选择固定到游览器即可</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141951184.png"></p>
+<p>3-滚动条，首先设置一个元件为动态面板，勾选掉动态面板自动调整页面大小（勾选的话超出的文字也会自动显示）</p>
+<p>4-在动态面板上加入段落控件（超出动态面板大小，为了看滚动条效果）</p>
+<p>5-右击选择滚动条为自动即可</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110141953105.png"></p>
+<h3 id="顶部固定条"><a href="#顶部固定条" class="headerlink" title="顶部固定条"></a>顶部固定条</h3><p>滑动到一定位置再弹出，和页面固定一样，就是加了个条件</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110142045724.png"></p>
+<p>一定要选择显示动态面板，不要选择显示矩形，不然无效，因为动态面板才能固定和滚动滑轮。</p>
+<h3 id="回到顶部"><a href="#回到顶部" class="headerlink" title="回到顶部"></a>回到顶部</h3><p>设置点击事件，滚动到锚链接即可</p>
+<h3 id="替换敏感词"><a href="#替换敏感词" class="headerlink" title="替换敏感词"></a>替换敏感词</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110142055740.png"></p>
+<p>利用替换函数即可</p>
+<p><mark>此外还要数学函数如比较大小计算加减乘除，字符串函数字母变大，布尔函数等大同小异不演示</mark></p>
+<h2 id="中继器"><a href="#中继器" class="headerlink" title="中继器"></a>中继器</h2><p>中继器就是设置一个模板，然后有类似数据库表的东西，将表内数据自动填充到模板，设置了多少个值就会呈现多少相同的东西。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161438334.png"></p>
+<p>笔记</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161051259.png"></p>
+<p>步骤</p>
+<p>1-选择元件中继器，点击，添加数据</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161438615.png"></p>
+<p><mark>模板是垂直还是水平，有没有间隔等，在样式中可调</mark></p>
+<p>2-设置你需要显示的模板，如你设置了名字，和qq，就用两个标题元件接收，照片用图片接收</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161054195.png"></p>
+<p>3-设置事件，将对应值赋予模板，数据表内有四个数据，页面就输出了第一张图的四个模板</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161055083.png"></p>
+<h3 id="中继器排序"><a href="#中继器排序" class="headerlink" title="中继器排序"></a>中继器排序</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161439767.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161439374.png"></p>
+<p>1-设置点击元件，添加中继器事件即可</p>
+<h3 id="中继器筛选"><a href="#中继器筛选" class="headerlink" title="中继器筛选"></a>中继器筛选</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161439621.png"></p>
+<p>1-添加筛选条件即可，用给文本框一个变量给用户选择，也可以直接固定选择</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161440849.png"></p>
+<h3 id="中继器翻页"><a href="#中继器翻页" class="headerlink" title="中继器翻页"></a>中继器翻页</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161449073.png"></p>
+<p>设置现在页面即可，一页显示几个数据可以在case中调，也可以在中继器样式中调，我只有四个数据，每页选择1最多只能选择四页（用户选择页数跳转，与筛选同理用变量接收即可）</p>
+<h3 id="评论案例"><a href="#评论案例" class="headerlink" title="评论案例"></a>评论案例</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161503278.png"></p>
+<p>1-通过数据集中的添加行为，中继器添加行数，增加中继器行数，即可以增加一个模板。</p>
+<p>2-当输入内容，名字，点击提交事件，评论增加一行，再从元件中取出（case事件，评论文本等于发布内容矩形的文本，或者在中继器中直接用变量接收）数据得以显示。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161507711.png"></p>
+<p>还要删除行，更新行，都是大同小异。</p>
+<h2 id="其他知识点"><a href="#其他知识点" class="headerlink" title="其他知识点"></a>其他知识点</h2><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202110161550945.png"></p>
+<p>1-内联框架即在一个框架里，可包含其他网站，视频，图片等，axure不支持视频音乐，在前端中可以。</p>
+<p>如下</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;iframe src&#x3D;&quot;https:&#x2F;&#x2F;zhoudongqi.com&#x2F;&quot; frameborder&#x3D;&quot;0&quot; width&#x3D;&quot;800&quot; height&#x3D;&quot;600&quot;&gt;&lt;&#x2F;iframe&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<iframe src="https://www.jinnian.life/" frameborder="0" width="800" height="600"></iframe>
+
+
+
+<p>2-本网站即为响应式布局，手机与电脑访问布局不同，自适应布局就是根据游览器页面当前大小，选择布局，在工具栏的视图中可设置。</p>
+<p>3-母版就相当于一个封装好的模块和函数，可直接被调用。</p>
+<p>注意：</p>
+<p>1-如果要跳转另一个动态面板，注意要隐藏本页面，或者在页面排序中另一个动态面板排在本页面前面，不然就一直显示不出来，问题找都找不到。</p>
+<h2 id="实践项目"><a href="#实践项目" class="headerlink" title="实践项目"></a>实践项目</h2><h3 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h3><p>需要axure原型源码的联系我即可。</p>
+<h3 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h3><p><video  width="500px" controls src="https://www.zhoudongqi.com/medias/video/rp_yanshi.mp4"></video></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>页面实现有多种方法，重在学会使用软件，灵活变通，找出最简单的方法。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">瑾年</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.zhoudongqi.com/archives/908fbb9b.html">https://www.zhoudongqi.com/archives/908fbb9b.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <!-- <a href="/about" target="_blank">瑾年</a> -->
+                    <a href="/about" target="_blank">周东奇</a>
+                    !
+                </span>
+            </div>
+            <!-- 自定义免责声明 -->
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-envelope">
+                        免责声明：
+                    </i>
+                </span>
+                <span class="reprint-info">本站所发布的一切内容,包括但不限于IT技术资源,网络攻防教程及相应程序等文章仅限用于学习和研究目的:不得将上述内容用于商业或者非法用途,否则一切后果请用户自负。本站部分信息与工具来自网络,版权争议与本站无关。您必须在下载后的24个小时之内,从您的电脑中彻底删除上述内容。如有侵权请邮件(jinnian770@gmail.com)与我们联系处理。
+                </span>
+            </div>
+            <!--  -->
+
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/AxureRP/">
+                                    <span class="chip bg-color">AxureRP</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/archives/810add95.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="日志与公告">
+                        
+                        <span class="card-title">日志与公告</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            瑾年站点出现的一些问题和更新记录
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-17
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%97%A5%E5%BF%97/" class="post-category">
+                                    日志
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%97%A5%E5%BF%97/">
+                        <span class="chip bg-color">日志</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/e255a10a.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="大学中计算机网络的一些基础知识">
+                        
+                        <span class="card-title">大学中计算机网络的一些基础知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            尽头不是死亡，而是一成不变的生活
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/">
+                        <span class="chip bg-color">大学课程</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">计算机网络</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 瑾年-JinNianX-瑾年的学习记录<br />'
+            + '文章作者: 瑾年<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者瑾年所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: red;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="6917645613"
+                   fixed='true'
+                   autoplay='false'
+                   theme='red'
+                   loop='all'
+                   order='random'
+                   preload='none'
+                   volume='0.4'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script> -->
+<script src="https://www.zhoudongqi.com/myutils/Meting.min.js"></script>
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2024</span>
+            
+            
+           <a href="/about" target="_blank">瑾年</a>&<a target="_blank" rel="noopener external nofollow noreferrer" href="http://blinkfox.com/">blinkfox</a>
+            |&nbsp;Powered by&nbsp;<a href="" target="_blank">Hexo</a>
+           |&nbsp;MyTeam&nbsp;<a href="http://jinnianx.cn/" rel="external nofollow noreferrer" target="_blank">JinNianX</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">227.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            <br>
+            <span class="justdoit">深呼吸，冥想，你能看多远还是蒙了眼;Dont't Panic,大胆做你所想;纠结没意思，Let yourself go，Just do it，Is that a compromise？Experience the journey of life.</span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp">
+                <!-- <img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
+                <a href="https://beian.miit.gov.cn" rel="external nofollow noreferrer" target="_blank">湘ICP备2021020184号</a>
+	<p></p>
+	<a rel="external nofollow noreferrer" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43042602000181" style="text-align: center;display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <!-- <img src="https://inews.gtimg.com/newsapp_bt/0/0613150938895_706/0" style="float:left;"/> -->
+        <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:FFFACC;">湘公网安备 43042602000181号</p></a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/JINNIAN666" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="https://v.douyin.com/i8V1U1oY" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="我的抖音：JinNianX" data-position="top" data-delay="50">
+        <i class="fab fa-free-code-camp"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=qq号&site=qq&menu=yes" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="QQ：加v即可" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="" class="tooltipped" target="_blank" data-tooltip="微信:RememberYourTowel公众号:JinNianX" data-position="top" data-delay="50">
+          <i class="fab fa-weixin"></i>
+    </a>
+
+</div>
+    </div>
+
+		 
+
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+ <!-- 后加弹窗的js开始-->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var welcomePopup = document.getElementById('welcomePopup');
+        var closeButton = document.getElementById('closeButton');
+
+        // 检查是否存在欢迎弹窗，如果存在则显示
+        if (welcomePopup) {
+            welcomePopup.style.display = 'block';
+        }
+
+        // 关闭按钮点击事件
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                welcomePopup.style.display = 'none';
+            });
+        }
+    });
+</script>
+ <!-- 后加弹窗的js结束-->
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>

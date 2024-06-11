@@ -1,0 +1,1752 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+ <!-- 后加弹窗html开始-->
+<div id="welcomePopup" style="display: block; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 9999; text-align: center;">
+    <h2>埃隆马斯克-科技资讯-JinNianX</h2>
+    <p>点击以下链接进入：<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.elonmusk.cn/" style="color: #007bff; text-decoration: underline;">https://www.elonmusk.cn/</a></p>
+    <button id="closeButton" style="background-color: #007bff; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">关闭</button>
+</div>
+ <!-- 后加弹窗html结束-->
+
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="python的一些入门基础知识,瑾年的学习记录">
+    <meta name="description" content="分享每天学到的各类前沿技术，与学习中遇到的问题，供大家学习交流。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>python的一些入门基础知识 | 瑾年-JinNianX-瑾年的学习记录</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img style="z-index:1" src="/medias/logo.png" class="logo-img" alt="logo"logo title="深呼吸，冥想，你能看多远还是蒙了眼;Dont't Panic,大胆做你所想;纠结没意思，Let yourself go，Just do it，Is that a compromise？Experience the journey of life.">
+                    
+                    <span class="logo-span" title="0-X,体验这场旅途;一切都在改变,唯有意识。">瑾年</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">瑾年-JinNianX-瑾年的学习记录</div>
+        <div class="logo-desc">
+            
+            分享每天学到的各类前沿技术，与学习中遇到的问题，供大家学习交流。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/JINNIAN666" rel="external nofollow noreferrer" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/JINNIAN666" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('当前为私密页面，请联系站长获取密码。')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">python的一些入门基础知识</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/">
+                                <span class="chip bg-color">大学课程</span>
+                            </a>
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-07-14
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-03-28
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    15 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="python的一些入门基础知识"><a href="#python的一些入门基础知识" class="headerlink" title="python的一些入门基础知识"></a>python的一些入门基础知识</h1><h2 id="p1-Python的介绍"><a href="#p1-Python的介绍" class="headerlink" title="p1-Python的介绍"></a>p1-Python的介绍</h2><p>python的特点<a target="_blank" rel="noopener external nofollow noreferrer" href="http://c.biancheng.net/view/7748.html">http://c.biancheng.net/view/7748.html</a></p>
+<p><mark>可移植性，各个平台能运行，运行快（基于c语言），简单易学，面向对象也能面向过程，可扩展性（能用c和c++编写，然后在python程序中使用，让运行速度更快隐藏算法），可嵌入性能把python嵌入c程序中当脚本使用，非常丰富的库（在libs中)</mark></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#输入成绩判断等级：</span>
+ 
+cj<span class="token operator">=</span><span class="token builtin">float</span> <span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"请输入你的成绩："</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> cj<span class="token operator">>=</span><span class="token number">90</span> <span class="token keyword">and</span> cj<span class="token operator">&lt;=</span><span class="token number">100</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"优秀"</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> cj<span class="token operator">>=</span><span class="token number">70</span> <span class="token keyword">and</span> cj<span class="token operator">&lt;</span><span class="token number">90</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"良好"</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> cj<span class="token operator">>=</span><span class="token number">60</span> <span class="token keyword">and</span> cj<span class="token operator">&lt;</span><span class="token number">70</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"及格"</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"你要努力了"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+<h2 id="p2-环境pycharm等安装"><a href="#p2-环境pycharm等安装" class="headerlink" title="p2-环境pycharm等安装"></a>p2-环境pycharm等安装</h2><h3 id="p2-Python安装"><a href="#p2-Python安装" class="headerlink" title="p2-Python安装"></a>p2-Python安装</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://mp.weixin.qq.com/s/4oWzRIn0sasfrxwpli_4hw">https://mp.weixin.qq.com/s/4oWzRIn0sasfrxwpli_4hw</a></p>
+<p>尽量不要中文路径。</p>
+<p>pip使用教程（下载标准库外的库）</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.cnblogs.com/songzhixue/p/11296720.html">https://www.cnblogs.com/songzhixue/p/11296720.html</a></p>
+<p>也可以直接在设置-项目-python解释器中点+安装库</p>
+<h3 id="Pycharm安装"><a href="#Pycharm安装" class="headerlink" title="Pycharm安装"></a>Pycharm安装</h3><pre class="line-numbers language-py" data-language="py"><code class="language-py">https<span class="token punctuation">:</span><span class="token operator">//</span>mp<span class="token punctuation">.</span>weixin<span class="token punctuation">.</span>qq<span class="token punctuation">.</span>com<span class="token operator">/</span>s?__biz<span class="token operator">=</span>MzI3NzI1MzY4Mw<span class="token operator">==</span><span class="token operator">&amp;</span>mid<span class="token operator">=</span><span class="token number">2247492904</span><span class="token operator">&amp;</span>idx<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>sn<span class="token operator">=</span><span class="token number">0970650063d724b9c251848a2e5789ad</span><span class="token operator">&amp;</span>chksm<span class="token operator">=</span>eb6bbe74dc1c3762518dbeb3bc2813ca8da339bfc014bf897fc2450d431f5a29343ceccfbbe4<span class="token operator">&amp;</span>scene<span class="token operator">=</span><span class="token number">178</span><span class="token operator">&amp;</span>cur_album_id<span class="token operator">=</span><span class="token number">1786174076420472834</span><span class="token comment">#rd</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>cd命令</strong></p>
+<pre class="line-numbers language-ht" data-language="ht"><code class="language-ht">https:&#x2F;&#x2F;jingyan.baidu.com&#x2F;article&#x2F;6079ad0ec0145b28ff86db88.html
+输入cd..为返回上一级
+输入d：为进入d盘，其他盘同理
+输入cd d：1\2\3即进入d盘的1文件夹中的2文件夹中的3文件夹，主要不可以直接跳盘，比如现在在c盘，直接cd d：&#x2F;1&#x2F;2&#x2F;3，必须先到d盘
+输入dir可显示当前级有的文件和文件夹（有dir的是文件夹，文件会直接显示大小）
+输入文件夹部分名字，再按tab键可补全文件名
+按上数字键盘旁边的上箭头，可以出现原先输入的命令<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###开发环境介绍</p>
+<p><strong>venv与直接建立项目的区别</strong></p>
+<p>venv建立项目是创造一个新的环境，库与标准库等是分开的，如当你接私活爬虫的requests库需要用2.0版本，而公司项目用的是1.0版本，如果不用venv虚拟隔开，就会冲突。</p>
+<p>第三方库可以在文件，设置，venv项目中添加</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JINNIAN666/picture/p1.png"></p>
+<h3 id="Pycharm"><a href="#Pycharm" class="headerlink" title="Pycharm"></a>Pycharm</h3><p><strong>快捷键</strong></p>
+<p><mark>快捷键失效，可能是与其他软件冲突，或者安装了vim的插件，在设置中的插件中给vim卸载了就行了，或是是键盘被锁定，按fn+win解开</mark></p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">https<span class="token punctuation">:</span><span class="token operator">//</span>blog<span class="token punctuation">.</span>csdn<span class="token punctuation">.</span>net<span class="token operator">/</span>cuomer<span class="token operator">/</span>article<span class="token operator">/</span>details<span class="token operator">/</span><span class="token number">81534140</span>
+
+https<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>cnblogs<span class="token punctuation">.</span>com<span class="token operator">/</span>sui776265233<span class="token operator">/</span>p<span class="token operator">/</span><span class="token number">10200809.</span>html
+
+可以在设置里面下载设置你习惯的编辑器快捷键，本人用windows选项
+crtl<span class="token operator">+</span><span class="token operator">/</span>注释
+ctrl<span class="token operator">+</span>alt<span class="token operator">+</span>l格式化代码
+ctrl<span class="token operator">+</span>d复制当前行到下一行
+ctrl<span class="token operator">+</span>y删除当前行
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注释shift+/，#为注释，···  ···前后三个点多行注释。</p>
+<p>明白venv与普通建立项目的区别，vene重新虚拟了一个环境，一般项目使用，学习阶段不用勾选，因为占用资源。</p>
+<p>文件重命名在refactor重构里面</p>
+<p>光标在函数上，按Ctrl再鼠标点击，可以看到函数底层定义</p>
+<p>win+r打开运行菜单，snippingtool系统截图工具</p>
+<p>mspaint是画图工具</p>
+<p><mark>在文件（file）-&gt;设置（setting）-&gt;键盘映射(keymap)中也可以查找各种快捷键</mark></p>
+<h3 id="如何汉化"><a href="#如何汉化" class="headerlink" title="如何汉化"></a>如何汉化</h3><p>点击左上角file，找到设置settings 找打插件plugins，再右边的搜索框输入chinese 插件安装后，点击应用Apply，再重启软件即可</p>
+<h2 id="p3-基础"><a href="#p3-基础" class="headerlink" title="p3-基础"></a>p3-基础</h2><h3 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h3><pre class="line-numbers language-none"><code class="language-none">a &#x3D; 1
+b &#x3D; 2
+print(a,b,100)
+#结果为1 2 100，print可以多个输出，而且可以直接带已知数,下面是print函数定义
+print(&quot;-&quot;*20)
+#结果为二十个&quot;-&quot;号--------------------，别问为什么，就是这样设置的
+#如果是数字和字符串做乘法运算，会将这个字符串重复多次。
+print()中整形也不能与字符串拼接，字符串双引号和单引号都可以。
+end&#x3D;&quot;&#x2F;n&quot;即语句输出完最后加一个换行，sep&#x3D;&quot;:&quot;即每个输出间用&quot;:&quot;隔开
+如print(1,2,3,sep&#x3D;&quot;:&quot;),输出1:2:3
+​&#96;&#96;&#96;def print(self, *args, sep&#x3D;&#39; &#39;, end&#x3D;&#39;\n&#39;, file&#x3D;None): # known special case of print
+    &quot;&quot;&quot;
+    print(value, ..., sep&#x3D;&#39; &#39;, end&#x3D;&#39;\n&#39;, file&#x3D;sys.stdout, flush&#x3D;False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+    &quot;&quot;&quot;
+    pass
+&#96;&#96;&#96;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>python中直接a = 100，A = ‘ABC’即可，不需要int和string什么的，会自动帮我们定义。</p>
+<pre class="line-numbers language-none"><code class="language-none">money &#x3D; 200
+type(money)#看money的类型
+print(type(money))#现在是int
+money &#x3D; 20.2
+print(type(money))#现在是float
+money &#x3D; &#39;1万&#39;
+print(type(money))#现在是str字符串，在引号里面就是字符串，单引号双引号都可以。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1-分大小写<br>2-由字母，数字，下划线，其他的特殊符号不行，不能数字开头。<br>3-格式错误可运行，有灰色波浪线，可用中文，但会黄色警告。<br>4-不能使用关键字。<br>5-最好见名知意<br>6-小驼峰开头第一个字母全部小写如getNameByLine,但python最好用下划线，如get_name_by_line<br>7-大驼峰，每个字母大写GetNameByLine（在面向对象的类名中使用）</p>
+<h3 id="数据类型与转换"><a href="#数据类型与转换" class="headerlink" title="数据类型与转换"></a>数据类型与转换</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109181228282.png"></p>
+<p>单引号双引号三个引号就是字符串类型，小数就是float型等等</p>
+<p>三个引号可保留格式输出字符串，如鹅鹅鹅诗歌的格式都保留了</p>
+<p>当字符串中需要有引号可以这样</p>
+<pre class="line-numbers language-none"><code class="language-none">message &#x3D; &quot;&#39;abcdefg&#39;&quot;
+message &#x3D; &#39;&quot;abcdefg&quot;&#39;
+但是不能message &#x3D; &#39;ab“cd&#39;efg”这样efg”就没有与之对应，语法出错<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109181251048.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入money等于10
+解决方法 print（int（money）+1000），即使money是字符也能准确转成对应的数字进行计算，结果为1010
+或者解决方法 print（money+str（1000））把1000变成字符串，进行拼接，结果为100010
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109181256996.png"></p>
+<p>input输入的默认是字符串类型，赋值后变量是字符串。</p>
+<p>字符串可以转int但必须是整数，如果是浮点数如1.11就会报错，如果是int型如字符串“1”，就会转为整型1</p>
+<p>int型可随便转成str型</p>
+<p>浮点数和str可以互相随便转换</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109181309222.png"></p>
+<p>布尔类型转int，true就是1，false就是0，int转布尔，除了0或者空字符串是false，其他都是true。</p>
+<h3 id="赋值与输出"><a href="#赋值与输出" class="headerlink" title="赋值与输出"></a>赋值与输出</h3><pre class="line-numbers language-none"><code class="language-none">a &#x3D; b &#x3D; c &#x3D; 5#可
+d&#x3D;&quot;dddd&quot;
+a,b,c,d&#x3D;5,5,5,&quot;ddd&quot;#可
+print(a,b,c,d)
+print(&quot;%daaaaaaaa      %d%d%s&quot; %(a,b,c,d))#这时输出后a和b相差aaaaaa和多个空格，print里面怎么写就输出什么<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109181403385.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109181416364.png"></p>
+<p>除就是直接除，整除就是结果取整，如9//6结果为1</p>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109181424820.png"></p>
+<p>先比较第一个,第一个大就大,不再比较后面的，如果第一个一样就依次比较后面的</p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>and两边一边为0,结果就为0,即一侧为假就是假,如过无0,则取后面那个(and第一个判断处理后，还需要判断后一个条件，最后判断是谁就输出谁),如a=1 b=3 print(b and a),得到的是1</p>
+<p>or两边一个为真就是真</p>
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 1
+b &#x3D; 2
+print(a or b)
+#结果为1，因为第一个1为真，就不再运行判断后面b是真是假，直接输出1
+a &#x3D; 0
+b &#x3D; 2
+print(a or b)
+#结果为2，因为第一个是0假，再判断后面的，后面为2，就输出2
+#这里是输出数字，在编辑器中已经定义了就是这样运行的<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 1
+b &#x3D; 2
+c &#x3D; 3
+print(b &gt; a and b&lt;3)
+#结果为true，这里不是数字，而有关系运算符，就输出true或者false
+print(not (b &gt; a and b&lt;3)) 
+#结果为false，not逻辑就是取反
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109181456230.png"></p>
+<p>%d digit数字数位，%s string ,%f float ,%o octal八进制</p>
+<pre class="line-numbers language-none"><code class="language-none">age &#x3D; 20
+name &#x3D; &quot;陈冠希&quot;
+money &#x3D; 2000000.99
+print(&#39;%d岁的%s一部电影赚了%.2f元&#39; % (age,name,money))
+#注意print里面有&#39;&#39;
+print(age+&quot;岁的&quot;+name+&quot;一部电影赚了&quot;+money+&quot;元&quot;)
+#或者print(str(age)+&#39;岁的&#39;+name+&#39;一部电影赚了&#39;+str(money)+&#39;元&#39;)
+#直接字符串拼接，但是因为age和money不是字符串类型，无法拼接，所以必须先强转。（拼接必须全是字符串类型）
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>%.2f即保留两位小数输出</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109181501663.png"></p>
+<h3 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h3><p>前缀0b就是二进制，0o就是八进制，0x十六进制hexadecimal，默认十进制</p>
+<p>十六进制是0123456789abcdef </p>
+<p><mark>二进制计算</mark></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109191143538.png"></p>
+<p>1，2，4，8，16，32，64，128，256 ，二进制哪一位有相加即可快速得到十进制。</p>
+<pre class="line-numbers language-none"><code class="language-none">a&#x3D;bin(20)
+#转二进制
+print(a)
+a&#x3D;oct(50)
+#转八进制
+print(a)
+a&#x3D;hex(150)
+#转十六进制
+print(a)
+#binary二进制，octal八进制，hex十六进制<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>转十进制</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109191316383.png"></p>
+<p>二进制转八与十六</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109191321010.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109191329497.png"></p>
+<h2 id="位运算结果"><a href="#位运算结果" class="headerlink" title="位运算结果"></a>位运算结果</h2><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109191355799.png"></p>
+<p>逻辑运算符print(5 and 20)与位运算print（5 &amp; 20）不同，前者只要没有0与空字符取最后数值，即20</p>
+<p>后者&amp;运算先将5与20二进制化为0b101与0b10100，然后前后&amp;运算得到0b100结果为4</p>
+<p>或运算与异或运算与‘与运算’相似，规则不同而已。</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109191355799.png"></p>
+<p>运算符</p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109191402977.png"></p>
+<p>1字节=1byte=8bit=三十二位</p>
+<p>所有位运算通过转换成二进制后运算</p>
+<p><mark>左右移计算</mark></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109191432979.png"></p>
+<p><mark>难点取反运算</mark></p>
+<p>如何true与false参与运算，true是1，false为0，print（1+true）得到2</p>
+<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202109191518985.png"></p>
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p>简单的if，else</p>
+<pre class="line-numbers language-none"><code class="language-none">import random  # 引入随机数包
+
+ran &#x3D; random.randint(1, 10)  # random.randint(1，10)生成1到10的整数
+ran2 &#x3D; random.randint(1, 10)
+print(ran, ran2)
+abs(ran)  # abs()是将括号里面的数字绝对值
+if ran &gt; ran2:
+    print(&quot;yes&quot;)
+else:
+    print(&quot;no&quot;)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>if-elif-else</p>
+<pre class="line-numbers language-none"><code class="language-none">#当所有的elif都不成立，才运行else，一个成立则跳出此判断语句再向下运行
+sales &#x3D; int(input(&quot;请输入你的销售金额，不同金额有不同奖励&quot;))#注意int转换下类型，input是字符串类型，无法与整形比较
+if 10000 &lt; sales &lt;&#x3D;50000:
+	print(&quot;你得到了一辆tesla&quot;)
+elif 50000 &lt; sales &lt;&#x3D;100000:
+	print(&quot;你得到了两辆tesla&quot;)
+elif 150000 &lt; sales &lt;&#x3D;200000:
+	print(&quot;你得到了三辆tesla&quot;)
+else:
+	print(&quot;你被开除了&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>pass关键词</p>
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 1
+if a&#x3D;&#x3D;1 :
+	pass
+else :
+	pass
+#pass无意义，但可支撑这个语句，不填语句会报错，pass可当空占用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>三目运算符</p>
+<p>格式： <code>变量 = 值1 if 条件 else 值2</code> 当条件成立时把 值1 赋值给变量，条件不成立时把 值2 赋值给变量，其实就是对if…else 语句的一种简写。</p>
+<p>示例：</p>
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 10
+b &#x3D; 30
+if a &gt; b:
+    c &#x3D; a
+else:
+    c &#x3D; b
+print(&#39;a和b两个数的较大值是%d&#39;%c)
+
+if a &gt; b:
+	print(&quot;a&gt;b&quot;)
+else:
+	print(&quot;a&lt;b&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以上的 <code>if...else</code> 代码可以简写成以下格式:</p>
+<pre class="line-numbers language-none"><code class="language-none">a &#x3D; 10
+b &#x3D; 30
+c &#x3D; a if a&gt;b else b
+print(&#39;a和b两个数的较大值是%d&#39;%c)
+
+print(&quot;a&gt;b&quot;) if a&gt;b else print(&quot;a&lt;b&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p>continue和break要在for,while等循环中使用,单独的if语句中不能使用break和continue.</p>
+<p>continue结束当前循环，break跳出整个循环</p>
+<pre class="line-numbers language-none"><code class="language-none"># i &#x3D; 0
+# next1 &#x3D; 0
+# num &#x3D; 0
+#
+# while i &lt; 100:
+#     next1 +&#x3D; 1
+#     i +&#x3D; 1
+#     num &#x3D; num +next1
+# print(num)
+
+# 猜数字
+# 因为不知道要猜多少次所以用死循环，然后判断加break，猜对就break跳出
+# import random
+#
+# while True:
+#     ran &#x3D; random.randint(1, 10)
+#     guess &#x3D; int(input(&quot;欢迎来到随机猜数字游戏(1-10)，请输入您猜的数字&quot;))
+#     # 记得把input转int不然永远是错
+#     if guess &#x3D;&#x3D; ran:
+#         print(&quot; 恭喜你猜对了&quot;)
+#         break
+#     else:
+#         print(&quot;你猜错了&quot;)
+
+
+# for循环
+# range(10),输出0-9，默认从0开始，sep为1，不包括最后一个
+# 输出0 1 2 3 4 5 6 7 8 9
+# for i in range(10):
+#     print(i)
+
+# 从1开始，间隔为2，输出1 3 5 7 9
+for i in range(1, 10, 2):
+    print(i)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="for-else-和-while-else"><a href="#for-else-和-while-else" class="headerlink" title="for- else  和 while -else"></a>for- else  和 while -else</h3><p>当没执行过break则执行else，执行过break则不执行else</p>
+<pre class="line-numbers language-none"><code class="language-none">for i in range(3):
+	if i &gt; 3:
+	break
+else:
+	print(&quot;if一直不成立，没执行过break，执行此else语句&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="continue和break"><a href="#continue和break" class="headerlink" title="continue和break"></a>continue和break</h3><pre class="line-numbers language-none"><code class="language-none"># 输出能不能被3整除的1-10的数
+# for i in range(10):
+#     if i % 3 !&#x3D; 0:
+#         print(i)
+#     else:
+#         pass
+
+
+# continue
+for i in range(10):
+    if i % 3 &#x3D;&#x3D; 0:
+        continue
+    else:
+        print(i)
+
+# break跳出整个循环，注意是最近的循环，不是跳出if，continue是跳出当前的一次循环
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="循环嵌套"><a href="#循环嵌套" class="headerlink" title="循环嵌套"></a>循环嵌套</h3><pre class="line-numbers language-none"><code class="language-none"># 打出倒立直角三角形
+*
+**
+***
+****
+*****
+# 方法一
+# n &#x3D; 0
+# while n &lt;&#x3D; 5:
+#     print(&quot;*&quot; * n)
+#     n +&#x3D; 1
+
+# 方法二
+n &#x3D; 1
+while n &lt;&#x3D; 5:
+    m &#x3D; 0
+    while m &lt; n:
+        print(&quot;*&quot;, end&#x3D;&quot;&quot;)#取消换行，因为这里的*需要连起来
+        m +&#x3D; 1
+    print()#加换行
+    n +&#x3D; 1
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="切片操作"><a href="#切片操作" class="headerlink" title="切片操作"></a>切片操作</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202111061641014.png"></p>
+<p>首先把s1的hello创建到变量池，然后把s1赋予s2，那么他们两个的地址相同，自然结果也都是hello</p>
+<p>，s3=”hello”编辑器从变量池找hello，发现已经有了，就直接赋予，这么做是为了节省空间，所以s1和s2</p>
+<p>和s3的地址都是一样的，s4是hello1，在变量池没有，所以另外创建，地址与前三个不同。</p>
+<pre class="line-numbers language-none"><code class="language-none">#查看地址的函数 id()
+n &#x3D; 3
+print(id(n))
+
+#转绝对值的函数 abs()
+n &#x3D; -3
+print(abs(n))
+
+#查看类型type()
+n &#x3D; -3
+print(type(n))
+
+#获取ascll码ord()
+n &#x3D; &quot;A&quot;
+print(ord(n))
+#结果65
+
+#获取字符串长度len()
+n &#x3D; &quot;111&quot;
+print(len(n))
+#结果3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="字符串的截取"><a href="#字符串的截取" class="headerlink" title="字符串的截取"></a>字符串的截取</h3><p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202111071740109.png"></p>
+<p><img src="https://www.zhoudongqi.com/medias/picture/tuchuang/202111071743698.png"></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>1-python不用{}包含语句，而是用缩进规划范围，所以在if等语句中一定要注意缩进。</p>
+<p>2-python里没有i++这种自增</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>千峰教育python700集从入门到精通<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1R7411F7JV">https://www.bilibili.com/video/BV1R7411F7JV</a></p>
+<p>千峰python专栏公众号<br>```</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">瑾年</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.zhoudongqi.com/archives/3242eca1.html">https://www.zhoudongqi.com/archives/3242eca1.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <!-- <a href="/about" target="_blank">瑾年</a> -->
+                    <a href="/about" target="_blank">周东奇</a>
+                    !
+                </span>
+            </div>
+            <!-- 自定义免责声明 -->
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-envelope">
+                        免责声明：
+                    </i>
+                </span>
+                <span class="reprint-info">本站所发布的一切内容,包括但不限于IT技术资源,网络攻防教程及相应程序等文章仅限用于学习和研究目的:不得将上述内容用于商业或者非法用途,否则一切后果请用户自负。本站部分信息与工具来自网络,版权争议与本站无关。您必须在下载后的24个小时之内,从您的电脑中彻底删除上述内容。如有侵权请邮件(jinnian770@gmail.com)与我们联系处理。
+                </span>
+            </div>
+            <!--  -->
+
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/">
+                                    <span class="chip bg-color">大学课程</span>
+                                </a>
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/archives/a2ab0f17.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="瑾年的一些前端工程师学习资料">
+                        
+                        <span class="card-title">瑾年的一些前端工程师学习资料</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一路走来，没有敌人，只看到朋友和师长。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" class="post-category">
+                                    学习资料
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">
+                        <span class="chip bg-color">学习资料</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/b92db53e.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="JavaScript的入门知识">
+                        
+                        <span class="card-title">JavaScript的入门知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            智者互持，愚者互撕。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">JavaScript基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 瑾年-JinNianX-瑾年的学习记录<br />'
+            + '文章作者: 瑾年<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者瑾年所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: red;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="6917645613"
+                   fixed='true'
+                   autoplay='false'
+                   theme='red'
+                   loop='all'
+                   order='random'
+                   preload='none'
+                   volume='0.4'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script> -->
+<script src="https://www.zhoudongqi.com/myutils/Meting.min.js"></script>
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2024</span>
+            
+            
+           <a href="/about" target="_blank">瑾年</a>&<a target="_blank" rel="noopener external nofollow noreferrer" href="http://blinkfox.com/">blinkfox</a>
+            |&nbsp;Powered by&nbsp;<a href="" target="_blank">Hexo</a>
+           |&nbsp;MyTeam&nbsp;<a href="http://jinnianx.cn/" rel="external nofollow noreferrer" target="_blank">JinNianX</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">227.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            <br>
+            <span class="justdoit">深呼吸，冥想，你能看多远还是蒙了眼;Dont't Panic,大胆做你所想;纠结没意思，Let yourself go，Just do it，Is that a compromise？Experience the journey of life.</span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp">
+                <!-- <img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
+                <a href="https://beian.miit.gov.cn" rel="external nofollow noreferrer" target="_blank">湘ICP备2021020184号</a>
+	<p></p>
+	<a rel="external nofollow noreferrer" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43042602000181" style="text-align: center;display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <!-- <img src="https://inews.gtimg.com/newsapp_bt/0/0613150938895_706/0" style="float:left;"/> -->
+        <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:FFFACC;">湘公网安备 43042602000181号</p></a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/JINNIAN666" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="https://v.douyin.com/i8V1U1oY" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="我的抖音：JinNianX" data-position="top" data-delay="50">
+        <i class="fab fa-free-code-camp"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="https://wpa.qq.com/msgrd?v=3&uin=qq号&site=qq&menu=yes" rel="external nofollow noreferrer" class="tooltipped" target="_blank" data-tooltip="QQ：加v即可" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="" class="tooltipped" target="_blank" data-tooltip="微信:RememberYourTowel公众号:JinNianX" data-position="top" data-delay="50">
+          <i class="fab fa-weixin"></i>
+    </a>
+
+</div>
+    </div>
+
+		 
+
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+ <!-- 后加弹窗的js开始-->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var welcomePopup = document.getElementById('welcomePopup');
+        var closeButton = document.getElementById('closeButton');
+
+        // 检查是否存在欢迎弹窗，如果存在则显示
+        if (welcomePopup) {
+            welcomePopup.style.display = 'block';
+        }
+
+        // 关闭按钮点击事件
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                welcomePopup.style.display = 'none';
+            });
+        }
+    });
+</script>
+ <!-- 后加弹窗的js结束-->
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>
