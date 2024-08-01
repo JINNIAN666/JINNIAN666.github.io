@@ -480,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-06-15
+                    2024-08-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    12.6k
+                    12.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    44 分
+                    45 分
                 </div>
                 
 
@@ -638,12 +638,18 @@
 <p>有时想买一个COM域名，站长又没有给出联系方式，因为是com域名whois又查不到信息，怎么办？</p>
 <p>可以先简单whois出当前域名注册商，再去去各大注册商（腾讯云，阿里云等）的官方whois平台，一般可以在这里联系到站长（可以通过注册商这个第三方联系，比如你在阿里云的whois告诉阿里云我要联系当前域名站长，阿里云就会发邮箱给站长：说有个人想联系你，你想和他联系吗？）</p>
 <p>TIP：一般新注册域名无法马上转出到其他服务商，如阿里云新域名注册后60天内无法转到腾讯云或者godaddy的。</p>
-<h2 id="网站ICP经营许可证"><a href="#网站ICP经营许可证" class="headerlink" title="网站ICP经营许可证"></a>网站ICP经营许可证</h2><p>这玩意就必须是公司了，而且还要相应资质，门槛高，没有这玩意网站是无法进行支付交易的。</p>
+<h2 id="网站ICP经营许可证"><a href="#网站ICP经营许可证" class="headerlink" title="网站ICP经营许可证"></a>网站ICP经营许可证</h2><p>这玩意就必须是公司了，而且还要相应资质，门槛高，需要三人的一个月社保证明，公司注册资金为100w等</p>
 <blockquote>
 <p>这个和什么公安备案的交互式又不同，你说公安备案我选了支付的交互呀？</p>
 <p>它们职责根本不同，你公安备案通过了支付交互不代表你能这样做，它只是一个备案，反而如果你备案了，没有经营许可证网站还涉及交易，还能通过备案找到你是谁。</p>
 </blockquote>
 <p>所以一般站长就会通过码支付或者易支付或者发卡网进行站点经营（详细自行百度吧）</p>
+<blockquote>
+<p>网上大部分说的是自身产品的延伸是不需要icp经营许可证的，比如做一个每日记录打卡软件的付费会员，这是卖的自身产品就不需要icp经营许可证。</p>
+<p>然后很多人说有第三方用户入驻产生内容的就需要icp经营许可证，比如论坛等。</p>
+<p>但是很多论坛也没有icp经营许可证呀？比如吾爱破解等</p>
+<p>我认为标准是，可以用户产生平台内容，但是不能让第三方除自己外的用户现实盈利。比如淘宝那种商家入驻肯定需要icp经营许可证。</p>
+</blockquote>
 <h2 id="网站运维"><a href="#网站运维" class="headerlink" title="网站运维"></a>网站运维</h2><p><code>大厂的cdn和对象存储一般是带宽无限（你可以设置，但它可以做到无限），流量收费。而有的小厂代理什么的，有那种无限流量，带宽有限的付费，怕刷流量可以用这种，不过得搞个正规的备案了的服务商，不然有风险。</code></p>
 <p>1-上cdn和对象存储oss/cos等。（记得设置限制和防刷）</p>
 <blockquote>
@@ -703,7 +709,7 @@
 </blockquote>
 <p>解决：</p>
 <p>最简单：</p>
-<p>国内ip：找个好waf如宝塔服务器独立部署的waf；上带盾的cdn，被打就上5s盾；</p>
+<p>国内ip：找个好waf如宝塔服务器独立部署的waf；上带盾和人机验证的的cdn，被打就上5s盾和验证；</p>
 <blockquote>
 <p>本地服务器nginxwaf：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADD-SP/ngx_waf/">https://github.com/ADD-SP/ngx_waf/</a></p>
 <p>宝塔独立部署waf：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.kancloud.cn/kern123/cloudwaf/3198567%EF%BC%88%E9%9D%A2%E5%AF%B9cdn%E6%9C%8D%E5%8A%A1%E5%A5%97%E9%A4%90%E4%B8%8D%E5%A4%9F%EF%BC%8C%E6%88%96%E8%80%85%E6%9C%8D%E5%8A%A1%E5%95%86%E7%9A%84cc%E9%98%B2%E5%BE%A1%E6%89%8B%E6%AE%B5%E4%B8%8D%E5%A4%9F%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E8%AE%BE%E7%BD%AE%E4%B8%80%E4%B8%AAwaf%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E5%85%B6%E5%AE%9E%E6%88%91%E8%AE%A4%E4%B8%BA%E6%90%9E%E8%BF%99%E4%B8%AA%E8%BF%98%E4%B8%8D%E5%A6%82%E5%8D%87%E7%BA%A7cdn%E9%98%B2%E5%BE%A1%E5%A5%97%E9%A4%90%EF%BC%89">https://www.kancloud.cn/kern123/cloudwaf/3198567（面对cdn服务套餐不够，或者服务商的cc防御手段不够的时候，我们自己设置一个waf服务器，其实我认为搞这个还不如升级cdn防御套餐）</a></p>
@@ -756,7 +762,7 @@
 <p>原理：因为cdn用的方案绝大都是nginx，只有http(s)协议能通过cdn到达源站，其他协议一律在cdn处过滤了。这样四层协议完全无法穿过cdn，什么udp 洪水，udp反射，icmp洪水，syn洪水（直接用假ip来请求，不建立真正的连接，但是通过tcp握手机制达到让我们服务器接收大量无用流量，这个其实本机配置下iptables就能防御）都没用。</p>
 </blockquote>
 <blockquote>
-<p>cdn可以防ddos，因为带宽打在cdn身上；但cdn防不了cc攻击的，cc攻击如：它是发起请求，去让你的服务器操作数据库，但是cdn是没有数据库功能的，所以这个攻击是源服务器在抗，cdn的waf都是通过限制和过滤恶意请求等间接防御。</p>
+<p>cdn可以防ddos，因为带宽打在cdn身上；但cdn防不了cc攻击的，cc攻击如：它是发起请求，去让你的服务器操作数据库，但是cdn是没有数据库功能的，所以这个攻击是源服务器在抗，cdn的waf都是通过限制和过滤恶意请求等间接防御。但是cc可以上人机验证，把http的cc请求拦截审核一次再发给源服务器，可以很好的解决cc攻击。</p>
 <p>不要用不正规的cdn厂家服务，你不续费，他可能故意ddos你。</p>
 </blockquote>
 <p>2-买有硬件防火墙的cdn和ip</p>
@@ -1490,7 +1496,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">228.3k</span>&nbsp;字
+                class="white-color">228.6k</span>&nbsp;字
             
             
             
