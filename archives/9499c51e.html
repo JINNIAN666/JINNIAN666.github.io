@@ -480,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-06
+                    2024-09-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    18.9k
+                    31.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    66 分
+                    112 分
                 </div>
                 
 
@@ -518,6 +518,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><p>1-如果你的服务器要搭建多个网站，一定要设置不同的数据库表前缀，不然如果再使用Redis的话，会导致数据错乱。</p>
+<p>2-运维的防御和优化都是专门各方面细致的优化，不能被木桶效应。术业有专攻，建立去问大佬，不要自己瞎搞，事半功倍。</p>
 <h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>如果你要成立一个品牌或者公司，要像注册商标一样，提前抢注你心仪的域名，否则就得出高价从他人那里购买。</p>
 <p>如果心仪域名已经在别人手里，又不想出高价购买，可以看此域名主人会不会到期不续费，在此域名过期60-75天的时候，可以提前去西部数码或阿里云等平台预约抢注。</p>
 <blockquote>
@@ -619,7 +620,7 @@
 <h3 id="备案问题"><a href="#备案问题" class="headerlink" title="备案问题"></a>备案问题</h3><p>1-备案服务器ip变更了。</p>
 <p>某些情况，当备案的ip和实际网站使用的IP不同（比如自己的备案厂商的服务器过期，然后用了朋友的服务器，或者其他小厂的服务器），服务商可能会发现，并打电话给我们。</p>
 <p>我们可以说网站使用了cdn，源服务器还是用的原先备案平台的（如原先服务器是腾讯云，即备案也肯定在腾讯云）即可，一般就没事了。</p>
-<p>如果他还要你提供源服务器ip，你报你的源服务器即可，如果原先的服务器过期了，你报一个同平台的服务器就行了（因为同平台换服务器，服务器变更不强制修改备案ip信息）。如果原服务器又过期，你在平台又没有服务器资源，那就只能买个<strong>原服务器厂商</strong>的便宜的能备案的服务（函数包或者最便宜的服务器），然后用此服务挂载一个网站的单页即可（前缀单页，比如让a.xxx.com解析到一个页面即可，也可以放一些源站文件到这个不用的服务器伪装一下），然后把ip报给他。实际上你还是用的服务商平台外的服务器为网站提供服务。</p>
+<p>如果他还要你提供源服务器ip，你报你的源服务器即可，如果原先的服务器过期了，你报一个同平台的服务器就行了（因为同平台换服务器，服务器变更不强制修改备案ip信息）。如果原服务器又过期，你在平台又没有服务器资源，那就只能买个<strong>原服务器厂商</strong>的便宜的能备案的服务（函数包或者最便宜的服务器），然后用此服务挂载一个网站的子域名的单页即可（前缀单页，比如让a.xxx.com解析到一个页面即可，也可以放一些源站文件到这个不用的服务器伪装一下），然后把ip报给他。实际上你还是用的服务商平台外的服务器为网站提供服务。</p>
 <p>注意：千万不要买备案服务商外的服务器（因为服务器在哪，你就得在哪备案，你腾讯云备案的，后续ip换成阿里云的，就要在阿里云接入原先腾讯云的备案，麻烦一点，如果你再买个腾讯云的便宜服务器，挂个单页就行，什么都不用管了）。</p>
 <p>情况一：在腾讯云备案后，自己服务器过期了，用了腾讯云之外服务器，如果有人打电话过来，直接说网站挂了cdn，所以ip显示和备案不同，如果继续问：“你服务器都过期了？怎么提供服务的？”，那没办法只能报朋友的腾讯云服务器ip（或者自己买个腾讯云最垃圾的服务器挂个单页，报这个ip）即可。</p>
 <p>情况二：在腾讯云备案后，自己备案对应的服务器没有过期，但是性能不够用，用了小厂服务器或者朋友服务器，那只要在原备案对应服务器挂个网站的单页即可，实际服务放到其他服务器。打电话来问，就说服务商外的服务器ip都是cdn，源服务器报自己那个和备案对应的服务器ip即可。</p>
@@ -638,7 +639,24 @@
 <li>不需要经营性备案：可以不变更备案，因为同一接入商更换IP不强制重新备案，可在需要变更其他信息的时候同时进行变更，无需单独变更。</li>
 </ol>
 </blockquote>
-<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p>1-总所周知，想用国内服务器为域名提供服务，域名必须备案，但备案又很麻烦，如果你只是用此域名做一个静态网站，则可以用github的仓库代替服务器。</p>
+<p><strong>其余一些小知识：</strong></p>
+<p>1-如你在腾讯云备案，你后后面换了阿里云的服务器当源站，阿里云会要求你接入备案的，否则服务器不给你提供服务，你阿里云接入备案后，腾讯云打电话给你问服务器过期了，你可以直接说用阿里云服务了。</p>
+<blockquote>
+<p>小厂服务器可能没这要求，只要你原先备案过就行。但是这个时候，腾讯云打电话给你，说你服务器过期了，你还是得想办法维持在腾讯云的备案，比如买个轻量云挂单页，把小厂服务器说成cdn服务。</p>
+</blockquote>
+<p>2-接入备案和申请备案一样，都要审核5-15天，但是域名首次申请是不能开站点，接入备案是必须开启站点访问。</p>
+<p>3-操作个人备案一个域名，会审核以往备案号下所有域名是否符合要求</p>
+<p>4-个人备案，比如你有10个网站，其实备案号一样的，只是后面有1，2，3，4.等序号区别，注销某个网站个人备案，只会注销一个网站，不会10个全部注销。</p>
+<p><strong>个人备案转企业备案</strong></p>
+<p>1-个人备案转企业备案，必须先注销再进行企业备案，备案期间网站不能访问。</p>
+<blockquote>
+<p>备案期间网站不能访问，但是可以规避可以不开www和主域名@访问就行，子域名他们备案审核可能查不到，但是被查到会退回，然后要重新备案的，可以提前提醒用户服务暂时转移到另一个网站。</p>
+</blockquote>
+<p><strong>域名购买</strong></p>
+<p>1-购买可以去没买过东西的新平台去注册，一般com老用户七八十，新平台去注册就三十多，国内云厂商多了，都可以白嫖新用户。</p>
+<p>2-续费可以转出域名，转出域名必须在新平台续费一年，但是这个续费一般比较便宜</p>
+<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p><strong>买服务器，可以找便宜的，但是不能太离谱，不然肯定会被跑路，或者超开（也就是说多人公用资源，卡的很）</strong></p>
+<p>1-总所周知，想用国内服务器为域名提供服务，域名必须备案，但备案又很麻烦，如果你只是用此域名做一个静态网站，则可以用github的仓库代替服务器。</p>
 <blockquote>
 <p>如zhoudongqi.cn此域名在当前2023年9月，并未备案，但我将此域名的DNS解析到github的仓库后（当然在github也需要进行一系列操作绑定并认证zhoudongqi.cn为你自己的域名，操作百度即可），这个仓库就相当于一个服务器为我的域名提供服务。</p>
 </blockquote>
@@ -647,6 +665,21 @@
 <p>4-轻量云和普通云服务器是有区别的，轻量云的设备比较老，而且有性能限制，简单说同样配置，性能没那么好。</p>
 <p>5-服务器和我们电脑一样，是分新老的，比如电脑的cpu的i5和i9，同样8核的话，那个性能是不同的，所以你会看到同样配置不同服务器，可能价格相差很大。</p>
 <p>6-云服务器就是一个物理服务器机虚拟化出多个云服务器多个ip，可以给多人使用。你的站点流量高，也可以直接买物理服务器套餐，或者找机房合作买一台物理服务器让它们代运维什么的。</p>
+<p><strong>活动</strong></p>
+<p>1-大厂服务器都很贵，一般除了轻量云，其他机器都是买给企业的，一般3折拿，量大1-2折。我们还是买小厂吧，或者用轻量云。</p>
+<p>2-大厂有那种企业认证等，比如阿里云企业认证领3500优惠券等可以关注一下。</p>
+<p><strong>服务器系统</strong></p>
+<p>1-centos纯命令占资源少，debian图形和命令都可以，ubuntu是图形界面</p>
+<blockquote>
+<p>现在一般用debian系统，因为centos停止维护了</p>
+</blockquote>
+<p><strong>注意：</strong></p>
+<p>1-国内买的服务器除了hdd，还都不能做发卡，代收款（比如易支付等），会被封机器。、</p>
+<p>2- 如果不是自己玩玩而已，不要买轻量云，轻量云性能比正常服务器差很多，而且遇到用户激增，不能加配置和加流量，是固定的，加配置也必须得整体上配置，不能单独加某个配置，只能套餐形的加配置，而且加配置一般没优惠价格，那么根本不划算，再者轻量云有固定流量限制，一个月流量用完没有流量包可买，只能按gb付费。</p>
+<p>3-要买买弹性云那些能后续加带宽和硬盘和内存等配置的服务器。</p>
+<p><strong>tips：</strong></p>
+<p>1-腾讯云轻量云可以买一个ddos防护，几毛钱，一个月抵御一次100g的攻击。</p>
+<p>2-服务器被打进黑洞了，有一个轻量ddos防护（防御几乎为0，就是用来解除封禁的），三十多，可以每个月立马解封三次。</p>
 <h2 id="WHOIS如何隐藏"><a href="#WHOIS如何隐藏" class="headerlink" title="WHOIS如何隐藏"></a>WHOIS如何隐藏</h2><p>如果你不想让别人查到当前域名的注册人，怎么办呢？</p>
 <p><strong>CN域名</strong>查询地址<a target="_blank" rel="noopener external nofollow noreferrer" href="https://webwhois.cnnic.cn/WelcomeServlet">https://webwhois.cnnic.cn/WelcomeServlet</a></p>
 <p>CN域名默认是开启姓名和邮箱的，就算你在注册商这里隐藏（腾讯云，阿里云等），在官网（上面链接）还是可以查到的。</p>
@@ -676,7 +709,7 @@
 <p>费率：一般易支付平台有的会收开户费，十块到一百块左右，外加以后微信和支付宝的每笔收款的2%-5%左右（看各易支付平台），也有的开户费高，但是不收手续费，只收他们必须支付给官方的官费。</p>
 <p>优点：收款方式对用户来说信任度高，和我们打王者荣耀什么的充钱一样的充值方式；因为是企业收款，也不会风控，就算风控了，易支付平台也有其他收款接口，所以不用担心用着用着收款不了了。</p>
 <p>缺点：必须要找靠谱平台（有国内备案，有公司等），否则容易跑路，记得钱必须每天提现，就算跑路也最多跑你一天的营业额，而且还可能你用户付款是正常款项是清楚钱，而你提现的时候，易支付可能给你打的款是hei钱（几率较小，你每天收那点钱一般没啥事，大了你自己也有企业官方收款了），所以必须找靠谱平台。</p>
-<p>tips：除了个人无法申请官方收款的群体，很多公司自己可以申请官方收款接口，也用易支付，因为用了官方支付钱好像直接到公司对公账户，一定程度来说是需要缴税的，还有可能这些公司的收入不正规，正规的易支付一般明令禁止不正规的网站接入支付，当然也有允许的易支付代收。</p>
+<p>tips：除了个人无法申请官方收款的群体，很多公司自己可以申请官方收款接口，也用易支付，我认为大概率是为了避责避税，因为用了官方支付钱好像直接到公司对公账户，一定程度来说是需要缴税的；还有可能这些公司的收入不正规，正规的易支付一般明令禁止不正规的网站接入支付，当然也有允许的易支付代收；就比如没有icp经营许可证，万一罚款利润所得，易支付就可以隐藏这个收入利润，查也最多查到最近调查期间的流水，起先用的易支付收款获取的利润肯定查不到。</p>
 <hr>
 <p>支付宝当面付：通过这个也可以实现跳转支付宝支付，支付宝官方有很多支付都需要营业执照的，当面付也需要公司企业，但是这个当面付可以不要提交营业执照申请（不是必填项），有的人就会用别人的门店信息去为自己申请当面付，但是这种方式通过率很低。</p>
 <p>优点：是到账自己账户；可以直接h5跳到支付宝支付，和公司收款无太大区别。</p>
@@ -704,6 +737,24 @@
 <p>一般小的时候没人管，大了自己办一个就行（企业得100w的资质，可以不实缴，但是目前条约公司必须五年内实缴，但是五年内做不起来，基本上也可以注销了，所以没影响，还有三个员工一个月的社保，申请下来看情况一万左右包全了还是代办，自己不操心（总共费用，包含了社保））</p>
 <p>你可以先搞个小公司，注册资金三五万的，公司账上不留钱，钱都以工资的形式发给自己等等，就算被罚款，罚的是公司，不是个人，大不了申请破产。也可以变通一下，参考其他和自己类似的网站，会员写赞助等等。</p>
 </blockquote>
+<p>关于ICP经营许可证要不要办，我认为有两篇文章讲的不错，</p>
+<p>1-<a target="_blank" rel="noopener external nofollow noreferrer" href="https://bidewang.co/profitable-website-icp-permission/#contact">https://bidewang.co/profitable-website-icp-permission/#contact</a></p>
+<p>2-<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.zhihu.com/question/27921429/answer/130639447?utm_psn=1816639345513340928">https://www.zhihu.com/question/27921429/answer/130639447?utm_psn=1816639345513340928</a></p>
+<p>3-<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.zhihu.com/question/27921429/answer/3163937752?utm_psn=1816644432860151808">https://www.zhihu.com/question/27921429/answer/3163937752?utm_psn=1816644432860151808</a></p>
+<p>第一：网站，没有第三方在上面上架商品，盈利等，是不需要许可证的。</p>
+<p>第二：网站，没有为第三方提供信息发布平台，是不需要许可证的。</p>
+<p>第三：依托微信小程序支付宝小程序等进行经营，不需要许可证，当然也不能违反第一第二规则。微信也会审核你的小程序业务，没有资质他们也不会通过。</p>
+<p>根据公告，有第三方入驻的网站平台，才需要办理许可证。</p>
+<ul>
+<li>第三方商家售卖产品（闲鱼，淘宝，京东，多商家入驻的小程序，等等）</li>
+<li>第三方用户发布信息（抖音，今日头条，知乎，微博，豆瓣，天涯社区，虎扑论坛，交友小程序，相亲平台</li>
+</ul>
+<p>所以做一个网站，卖自己的东西，比如网站会员，是不需要icp经营许可证的。</p>
+<p>如果你的网站中有论坛，那可能就涉及到“第三方用户发布信息”，严格要求来说是需要icp经营许可证的。但是其中这一点也有说法，是可解释性的，比如你虽然提供了用户发布信息，但是你并没有让用户挣钱，没有像知乎那样有用户间的付费解答，没有让用户赚钱自己抽佣，也可以是不需要icp经营许可证的，或者说没有完全违反第二条，是较为轻微的。</p>
+<p>实际情况：</p>
+<p>除了上海，北京，西藏，新疆严格执行，其他地区一般要求放宽了。</p>
+<p>实际中很多带论坛的网站都没有icp许可证，只要你的网站内容正能量，合规，不是hhd，一般来说是没人查的，就像地摊经济，规章是死的，人是活的，摆地摊属于不合规的无证经营，但是很多地方是不管的，因为你卖的东西没有伤天害理，而且是正常的有利于经济发展的东西，但是当你正式有店面了，就需要办理营业执照等。论坛网站只要你的内容是正能量，促进社会发展的，小的时候不会有人查，大的时候，就像你有正式店面了，网站做大了，有能力办icp经营许可证了，就需要尽快办理。</p>
+<p>所以你没有到一定规模一般不查；查了只要你没有让用户盈利，也是轻微，只会通知关闭相关论坛服务即可，不会罚款；就算罚款也是罚的公司，你账上没钱大不了申请破产（根本就不会这样罚款，除非大人物搞你，这上下是有出入的）。</p>
 <h2 id="网站运维"><a href="#网站运维" class="headerlink" title="网站运维"></a>网站运维</h2><p><code>大厂的cdn和对象存储一般是带宽无限（你可以设置，但它可以做到无限），流量收费。而有的小厂代理什么的，有那种无限流量，带宽有限的付费，怕刷流量可以用这种，不过得搞个正规的备案了的服务商，不然有风险。</code></p>
 <p>1-上cdn和对象存储oss/cos等。（记得设置限制和防刷）</p>
 <blockquote>
@@ -726,7 +777,7 @@
 </blockquote>
 <p>什么设置修改后台访问端口和地址；后台用户名不要与前台一致；</p>
 <p>设置后台登入次数等限制，即使找到后台入口也爆破不开；禁止国外ip访问（dns层面（直接国外ip访问，主机地址解析到127.0.0.1），防火墙层面）；</p>
-<p>修改ssh连接端口；防止ssh爆破；隐藏服务器信息，关闭不必要的端口；</p>
+<p>修改ssh连接端口；安装宝塔安全插件防止ssh爆破（fail2ban）；隐藏服务器信息，关闭不必要的端口；</p>
 <p>https；及时更新系统（yum -y update）和环境；定期扫描木马，不用盗版插件与代码；</p>
 <p>禁ping等(对象是服务器，你在宝塔（也可以腾讯云直接防火墙禁ping，有很多种方式，别禁了记不得去哪可以打开）把源服务器设置了禁ping，不代表cdn也禁ping，cdn是另外的服务器)；</p>
 <p>设置域名禁止转移；宝塔的安全软件全安排上（win系统可以用安全狗）；</p>
@@ -744,7 +795,7 @@
 <p>1-网站没有太大的业务价值的时候，装一些waf（比如wp程序就搞个wordfence插件等），每天备份就行，被黑了大不了重装。</p>
 <p>2-宝塔面板或者什么权限，全部开双重验证，如宝塔：设置指定地址和端口才能进管理后台，然后还得输入一次页面方法密码，然后输入面伴登录账户密码后，还得手机二次验证。</p>
 <p>3-没用的端口全部关了。</p>
-<p>4-网站有业务价值后，可以找专业人士渗透测试。</p>
+<p>4-网站有业务价值后，可以找专业人士渗透测试。（比如“知道创宇”，专业的网络安全服务，为各大厂和各大国家网站提供网络安全服务，<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.knownsec.com/%EF%BC%89">https://www.knownsec.com/）</a></p>
 <p><strong>每日措施：</strong></p>
 <p><strong>每天备份到本地，网站文件和数据库备份</strong></p>
 <blockquote>
@@ -769,7 +820,8 @@
 <p>提现一定要谨慎，必须人工审核，因为你数据库可能被黑了，他直接能给自己充vip加钱，每天要注意这些异常</p>
 </blockquote>
 <p>5-只要黑客权限够高，他可以改你的任何内容，所以包括支付，每天去看看自己的收款功能是否正常。</p>
-<h3 id="DDos攻击"><a href="#DDos攻击" class="headerlink" title="DDos攻击"></a>DDos攻击</h3><blockquote>
+<h3 id="DDos攻击"><a href="#DDos攻击" class="headerlink" title="DDos攻击"></a>DDos攻击</h3><p>下面的很繁琐，但是别管其他七里八里的，大部分攻击流量来自海外，禁止海外访问是最重要也是最有效的一步。</p>
+<blockquote>
 <p>所有的措施只是追求一个性价比的防御方式，但是惹到大佬了，肯定防不住，大型攻击只有上高防，不然腾讯云这些大厂的高防硬件服务早破产了。</p>
 </blockquote>
 <p>tip：</p>
@@ -796,7 +848,7 @@
 <p>国内ip：找个好waf如宝塔服务器独立部署的waf；上带盾和人机验证的的cdn，被打就上5s盾和验证；</p>
 <blockquote>
 <p>本地服务器nginxwaf：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ADD-SP/ngx_waf/">https://github.com/ADD-SP/ngx_waf/</a></p>
-<p>宝塔独立部署waf：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.kancloud.cn/kern123/cloudwaf/3198567%EF%BC%88%E9%9D%A2%E5%AF%B9cdn%E6%9C%8D%E5%8A%A1%E5%A5%97%E9%A4%90%E4%B8%8D%E5%A4%9F%EF%BC%8C%E6%88%96%E8%80%85%E6%9C%8D%E5%8A%A1%E5%95%86%E7%9A%84cc%E9%98%B2%E5%BE%A1%E6%89%8B%E6%AE%B5%E4%B8%8D%E5%A4%9F%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E8%AE%BE%E7%BD%AE%E4%B8%80%E4%B8%AAwaf%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E5%85%B6%E5%AE%9E%E6%88%91%E8%AE%A4%E4%B8%BA%E6%90%9E%E8%BF%99%E4%B8%AA%E8%BF%98%E4%B8%8D%E5%A6%82%E5%8D%87%E7%BA%A7cdn%E9%98%B2%E5%BE%A1%E5%A5%97%E9%A4%90%EF%BC%89">https://www.kancloud.cn/kern123/cloudwaf/3198567（面对cdn服务套餐不够，或者服务商的cc防御手段不够的时候，我们自己设置一个waf服务器，其实我认为搞这个还不如升级cdn防御套餐）</a></p>
+<p>宝塔独立部署waf：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.kancloud.cn/kern123/cloudwaf/3198567%EF%BC%88%E9%9D%A2%E5%AF%B9cdn%E6%9C%8D%E5%8A%A1%E5%A5%97%E9%A4%90%E4%B8%8D%E5%A4%9F%E9%AB%98%E7%BA%A7%E6%B2%A1%E6%9C%89%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%EF%BC%8C%E6%88%96%E8%80%85%E6%9C%8D%E5%8A%A1%E5%95%86%E7%9A%84cc%E9%98%B2%E5%BE%A1%E6%89%8B%E6%AE%B5%E4%B8%8D%E5%A4%9F%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E8%AE%BE%E7%BD%AE%E4%B8%80%E4%B8%AAwaf%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E5%85%B6%E5%AE%9E%E6%88%91%E8%AE%A4%E4%B8%BA%E6%90%9E%E8%BF%99%E4%B8%AA%E8%BF%98%E4%B8%8D%E5%A6%82%E5%8D%87%E7%BA%A7cdn%E9%98%B2%E5%BE%A1%E5%A5%97%E9%A4%90%EF%BC%89">https://www.kancloud.cn/kern123/cloudwaf/3198567（面对cdn服务套餐不够高级没有人机验证，或者服务商的cc防御手段不够的时候，我们自己设置一个waf服务器，其实我认为搞这个还不如升级cdn防御套餐）</a></p>
 </blockquote>
 <p>国外ip：解析到cloudflare的cdn上或者直接禁止国外ip；</p>
 <blockquote>
@@ -862,21 +914,24 @@
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1MX4y177BU/">https://www.bilibili.com/video/BV1MX4y177BU/</a></p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1vX4y1p7Su/">https://www.bilibili.com/video/BV1vX4y1p7Su/</a></p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/qq_23936389/article/details/106345792">https://blog.csdn.net/qq_23936389/article/details/106345792</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/645523750">https://zhuanlan.zhihu.com/p/645523750</a></p>
 </blockquote>
 <p><strong>源ip已经泄露</strong></p>
 <p>解决方法：如果已被记录，可以更换源ip，<strong>开启c设置好dn后再解析更换后的源ip服务</strong>（否则可能换了又被立马记录）</p>
 <p><strong>注意：</strong>更换源ip不一定要换服务器，每台服务器一般是有更换公网ip名额的。如：腾讯云轻量级服务器实例，有一次免费更换ip的机会，去服务器控制台换就行。</p>
 <p><strong>1-网络工具查询：</strong></p>
+<p>教程：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.beiqiangcha.com/news/6527.html">https://www.beiqiangcha.com/news/6527.html</a></p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://search.censys.io/">https://search.censys.io/</a></p>
 <p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://site.ip138.com/">https://site.ip138.com/</a></p>
 <blockquote>
 <p>一般这些网址是24h去扫全世界网站的端口和ip，然后进行记录，即使你套了cdn，你的源ip很有可能已经被记录在这些网站中。</p>
 <p>解决方法：更换源ip</p>
 </blockquote>
-<p><strong>2-常规ping查询ip：</strong><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.itdog.cn/ping/www.elonmusk.cn">https://www.itdog.cn/ping/www.elonmusk.cn</a></p>
+<p><strong>2-常规ping查询ip或者那些censys查历史解析ip：</strong><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.itdog.cn/ping/www.elonmusk.cn">https://www.itdog.cn/ping/www.elonmusk.cn</a></p>
 <blockquote>
 <p>一般套了cdn后，ping不出源ip，但也有可能刚加cdn没陆续生效，还是有源ip存在。</p>
-<p>解决方法：一样，换服务器ip然后套cdn</p>
+<p>历史ip就是你加cdn之前解析到源ip过，那些网站会记录下来</p>
+<p>解决方法：一样，换服务器ip然后套cdn，千万不要解析源ip，解析一次可能就被扫描记录了，除非你是高防机器不怕露源。</p>
 </blockquote>
 <p><strong>3-偏远地区访问；或硬刚cdn。</strong></p>
 <p>偏远地区访问服务：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://tools.ipip.net/cdn.php">https://tools.ipip.net/cdn.php</a></p>
@@ -904,8 +959,10 @@
 </blockquote>
 <p><strong>6-TLS证书</strong></p>
 <p>原理：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1Hu4y147wW/">https://www.bilibili.com/video/BV1Hu4y147wW/</a></p>
-<p>教程:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1cy4y1K7cu/">https://www.bilibili.com/video/BV1cy4y1K7cu/</a></p>
+<p>教程:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.cnblogs.com/linuxprobe/p/14932932.html">https://www.cnblogs.com/linuxprobe/p/14932932.html</a></p>
 <p>证书生成站点:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ssleye.com/">https://www.ssleye.com/</a></p>
+<p>原理：就是访问你的网站，然后看域名的ssl证书的sha256指纹，然后去<a target="_blank" rel="noopener external nofollow noreferrer" href="https://censys.com/%E5%92%8Chttps://crt.sh/%E5%8E%BB%E6%90%9C%E4%BD%A0%E5%9F%9F%E5%90%8D%E6%88%96%E8%80%85%E8%AF%81%E4%B9%A6%E6%8C%87%E7%BA%B9%EF%BC%8C%E6%89%BE%E5%88%B0%E5%AF%B9%E5%BA%94%E7%9A%84ip%E5%92%8C%E4%BD%A0%E7%9A%84%E8%AF%81%E4%B9%A6%E6%8C%87%E7%BA%B9%E4%B8%80%E6%A0%B7%EF%BC%8C%E9%82%A3%E5%B0%B1%E6%98%AF%E6%BA%90ip%E3%80%82">https://censys.com/和https://crt.sh/去搜你域名或者证书指纹，找到对应的ip和你的证书指纹一样，那就是源ip。</a></p>
+<p>如果查不到，那就再去dns记录网站，去查询你域名所有的dns记录的ip，一个个去访问https://你的源站IP:443，看看有没有证书可以对上主域名。</p>
 <blockquote>
 <p>虽然是由ip获取域名，但是：</p>
 <p>市面上很多工具爬虫24小时不停的抓取扫描IP，这类的工具网站通过无差别HTTP/HTTPS请求所有的IP，并将抓取到的IP地址所对应的网站记录到网站，以至于有些攻击者可以通过这类的网站可以直接查询到网站源站IP，因此在搭建网站的时候一定要做好屏蔽安全工作。</p>
@@ -927,17 +984,17 @@
 </ol>
 </blockquote>
 <p>但是如果站点有一些资源没被cdn普及到，被攻击者发现了，那么这些资源的请求会直接请求源ip，就暴露了源ip。</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>宝塔面板用户可添加一个随意的网站1.1.1.1（域名或者IP随意），然后删除宝塔创建网站默认生成的全部文件，然后为这个随意添加的网站配置一个无效的证书（本文下方会为大家提供一个无效的证书使用），配置好证书之后在宝塔面板后台：【网站】-【默认站点】中心选择刚才添加的这个随意的网站作为默认站点。</p>
-<p>7-网站漏洞</p>
+<p><strong>8-网站漏洞</strong></p>
 <blockquote>
 <p>原理：攻击者利用网站的漏洞让我们的服务器去攻击者黑客设置的资源，建立连接就暴露了IP</p>
 <p>解决方法：这个看情况而定了，解决漏洞即可。</p>
 </blockquote>
-<p>8-源服务器的遗留文件</p>
+<p><strong>9-源服务器的遗留文件</strong></p>
+<p>有的老文件不在cdn范围之内，就可能被攻击者扫到，然后直接建立和源ip的连接。</p>
 <p><strong>防御总结：</strong></p>
 <blockquote>
 <p>1-源服务器，如果你是宝塔面板就把能开的优化策略和免费的安全插件都搞起。</p>
-<p>2-然后找一个防御ddos和cc的安全脚本安装上，比如基于iptables一类的开源免费脚本，或者宝塔的付费waf(有一个是基于nginx的，有一个是独立服务器部署的waf)（不漏源ip的话，可以不用设置）（如果站点上了cdn，cdn服务商一般也会自带这些的，但是cdn的是cdn的，万一源ip暴露，源服务器的防御脚本也能起一定作用）</p>
+<p>2-然后找一个防御ddos和cc的安全脚本安装上，比如基于iptables一类的开源免费脚本，或者宝塔的付费waf(有一个是基于nginx的，有一个是独立服务器部署的waf)（不漏源ip的话，可以不用设置）（如果站点上了cdn，cdn服务商一般也会自带这些的，但是cdn的是cdn的，万一源ip暴露，源服务器的防御脚本也能起一定作用），也可以用nginx免费防火墙，也有防cc功能</p>
 <p>3-套个cdn就行了（抵御ddos的四层攻击，国内大厂计量cdn注意七层http刷量，如果是cf那种无限流量就不怕）</p>
 <p>4-cc攻击的话，cdn一般会防，还有1，2也都会防。</p>
 <p>5-不要泄露源ip</p>
@@ -959,7 +1016,10 @@
 <p>sql防范：对用户的输入过滤等。</p>
 <p>xss防范：对用户的输入（账户密码，评论等各种input框）做过滤，对输出做转义</p>
 <p>csrf防范：使用token（因为有同源策略，其他站点拿不到另一个站点的token）；避免get请求；使用验证码等，但是cookie也有同源策略，为什么又被利用了呢？token也会被xss等方式劫持呀？攻防永无尽之，这里只是了解</p>
-<h3 id="CDN的选择"><a href="#CDN的选择" class="headerlink" title="CDN的选择"></a>CDN的选择</h3><p>按理来说节点ip越多，发布地区越广，加速效果越好；</p>
+<h3 id="CDN的选择"><a href="#CDN的选择" class="headerlink" title="CDN的选择"></a>CDN的选择</h3><blockquote>
+<p>那些限制带宽的cdn，是单个节点限制，比如写着限制10m/s，如果有10个节点，就是每个节点都有10m/s，而不是说全国所有节点一起总共去分10m/s，因为他们根本做不到这种流量计算配制。</p>
+</blockquote>
+<p>按理来说节点ip越多，发布地区越广，加速效果越好；</p>
 <p>但是ping一些大厂官网会发现他们的ip一般就4-6个，也不多呀？</p>
 <p>因为他们的架构不像普通网站，而且他们的一个ip可能能顶你10个ip（也可能一个ip就是一整个机房），他们公司有专门的部署架构。</p>
 <blockquote>
@@ -1002,7 +1062,8 @@
 <p>下图是cdn的一些常见疑问。</p>
 <p><img src="https://www.zhoudongqi.com/cdn_help.jpeg"></p>
 <p>如上图提到了cdn的疑问，还介绍了dcdn，dcdn其实也不贵，可以有效防止cc攻击，因为它除了很多防止cc的规则外，更重要的是有多种人机验证机制，这些规则按照sec收费，不贵，应该也就百多一个月。</p>
-<p>但是，他虽然防御cc很厉害，不过当你遇到ddos攻击，其中肯定包括第四层攻击，阿里云完全有死扛第四层攻击的能力，cdn的第四层攻击流量是不收费的，因为这是基于ip的攻击。只有应用层第七层才能知道攻击的是你的网站，所以收费。但是阿里云不会去死扛第四层攻击，他会根据受攻击cdn的ip去推导出是谁的域名网站被攻击了，然后将你拉入沙箱，暂时停止你的dcdn服务，除非你购买ddos独立防护。这个防护特别贵，不是一般人买的起的，而且也不是一直防护，一个月只能防护几次而已。</p>
+<p>其中cdn选项中可能有websocket加速，tcpudp加速是给那种直播行业比如实时评论等功能用的，我们不需要。</p>
+<p>但是，他虽然防御cc很厉害，不过当你遇到ddos攻击，其中肯定包括第四层攻击，阿里云完全有死扛第四层攻击的能力，cdn的第四层攻击流量是不收费的，因为这是基于ip的攻击。只有应用层第七层才能知道攻击的是你的网站，所以收费。但是阿里云不会去死扛第四层攻击，他会根据受攻击cdn的ip和客户中谁的网站突然涌入大量请求（被ddos，其中肯定混合了争对你网站的cc攻击，这个cc攻击动态请求也是过cdn的）等一系列措施，去推导出是谁的域名网站被攻击了，然后将你拉入沙箱，暂时停止你的dcdn服务，除非你购买ddos独立防护。这个防护特别贵，不是一般人买的起的，而且也不是一直防护，一个月只能防护几次而已。</p>
 <p>腾讯的scdn和edgeone同理，也具有很好的cc防御，但是不会去抗第四层攻击，但是貌似比阿里云好一点，提供了一些基础的第四层防护带宽，但是他们并不承诺最小防护带宽，通过朋友了解到，这点防护是根本防不住的，随后也会被拉入沙箱，除非买独立ddos防护，这个防护根本买不起，而且需要买很高价格edgeone套餐的企业用户才能接入。</p>
 <p>所以我们只能选择小厂的cdn去死扛第四层了，小厂当然没有腾讯云厉害，腾讯云的死扛是真保证每个人的死扛，给每个人都留了死扛的资源，所以很贵，小厂的死扛是很多个人共用这个”死扛资源”，所以别人网站被攻击，可能还会影响到你，但是找个稍微大点的厂买死扛就够用了，目前ddos攻击还不是特别猖狂，多个人同时收到ddos攻击的情况较少，共用死扛资源也够用。</p>
 <p>所以小厂cdn可以说防御可用性是80%，价格200一个月，大厂是防御可用性100%但是一个月一万，不是做的特别大，你没必要去花1w去保证站点稳定防御可用性。</p>
@@ -1012,11 +1073,134 @@
 <p>tips：cdn有防cc规则和人机验证规则，但是这些都作用在”请求“，我们自己的程序前后端也需要做一些防护。cc请求的是登录注册那些接口，所以这些接口都要做人机验证，甚至接入付费的极验人机验证。</p>
 <p>除了cdn的死扛防御和cc规则，有时候防不住，漏了一些恶意请求，那么我们源服务器也可以购买一些带ddos防护的源站高防ip，还有买性能配置高的服务器，自然抗攻击强一点。</p>
 </blockquote>
-<h2 id="OSS存储桶"><a href="#OSS存储桶" class="headerlink" title="OSS存储桶"></a>OSS存储桶</h2><p>存储服务最好和源服务器是同一地区，可以让网站更快，最好服务商也相同，可以节省一点流量。</p>
+<p><strong>cdn配置</strong></p>
+<p>1-问号后参数处理—-设置带参数/去参数缓存</p>
+<p>不处理：默认带问号后参数缓存，带问号后参数回源。<br>缓存和回源均去除：缓存和回源均去掉问号后的参数（若问号后参数不一致，文件内容一致，则推荐此配置，可减少回源）</p>
+<p>如果你的网站是动态的，你需要选择不处理，不然你没设置好，动态请求都可能根本请求不出去，会提示400。</p>
+<p>2-缓存策略（html千万不能缓存）</p>
+<blockquote>
+<p>css,js,zip,gzip,tar,7z,bzip2,dmg,gz,tif,tif,bmp,mp3,mp4,avi,mpeg,aac,rmvb,mkv,flv,swf,mov,jpg,jpeg,png,bmp,gif,psd,ico,tga,imb,tiff,svg,webp</p>
+<p>建议如上的不会改变的静态资源缓存30天即可</p>
+<p>如果你是php的动态程序，然后通过php转化为html再下发给用户，那html千万不能存储，因为你html存储了，用户看到的页面直接不变了，何来的动态。而且很容易出现各种问题，比如用户访问网站白屏或者响应文件头content-type出错，网站从html/text变成application/octet-stream就变成下载一个bin文件。</p>
+</blockquote>
+<p><strong>cdn推荐</strong></p>
+<p>白山,<a target="_blank" rel="noopener external nofollow noreferrer" href="https://baishan.com/">https://baishan.com/</a> 为各大企业和国家网站提供scdn服务，只服务企业，如果你没有企业可以找一个用此产品的企业，你去开通他们企业账号的子账号。</p>
+<p>知道创宇<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.knownsec.com/%E4%B8%BA%E5%90%84%E5%A4%A7%E4%BC%81%E4%B8%9A%E5%92%8C%E5%9B%BD%E5%AE%B6%E7%BD%91%E7%AB%99%E6%8F%90%E4%BE%9Bscdn%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%AF%94%E7%99%BD%E5%B1%B1%E6%9B%B4%E5%BC%BA%E6%9B%B4%E8%B4%B5%EF%BC%8C%E8%BF%98%E6%9C%89%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E7%AD%89%E7%BD%91%E5%AE%89%E6%9C%8D%E5%8A%A1%EF%BC%8C%E9%99%A4%E4%BA%86scdn%EF%BC%8C%E6%9B%B4%E7%89%9B%E7%9A%84%E6%98%AF%E5%AE%83%E7%9A%84%E5%AE%89%E5%85%A8%E6%9C%8D%E5%8A%A1%E3%80%82">https://www.knownsec.com/为各大企业和国家网站提供scdn服务，比白山更强更贵，还有渗透测试等网安服务，除了scdn，更牛的是它的安全服务。</a></p>
+<p>上海云盾，免费无限流量但是限速5m/s，而且还有滑块可以开。小站完全够用，但是被四层ddos会沙箱。</p>
+<p><strong>cloudflared的配置和接入和优选</strong></p>
+<blockquote>
+<p>接入教程:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.imydl.com/wzjs/16711.html">https://www.imydl.com/wzjs/16711.html</a></p>
+<p>优选教程：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.tencent.com/developer/article/2437958">https://cloud.tencent.com/developer/article/2437958</a></p>
+<p>优选节点ip:<a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.uouin.com/cloudflare.html%E5%92%8Chttps://cf.vvhan.com/">https://api.uouin.com/cloudflare.html和https://cf.vvhan.com/</a></p>
+<p>优选节点每15分钟自动切换：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/qq1345659844/article/details/141605565%EF%BC%88%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%98%AF%E8%A2%AB%E6%94%BB%E5%87%BB%E4%BA%86%E5%86%8D%E7%94%A8%EF%BC%8C%E5%B9%B3%E6%97%B6%E5%9B%BD%E5%86%85%E4%B8%8D%E7%94%A8cf%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%B2%A1%E5%BF%85%E8%A6%81%E6%90%9E%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%EF%BC%8C%E8%A2%AB%E6%94%BB%E5%87%BB%E4%BA%86%E8%87%AA%E5%B7%B1%E4%BC%98%E9%80%89%E5%87%A0%E4%B8%AAip%E6%8C%82%E4%B8%8A%E5%B0%B1%E8%A1%8C%E3%80%82%E5%86%8D%E6%80%8E%E4%B9%88%E4%BC%98%E9%80%89%E4%B9%9F%E6%AF%94%E5%9B%BD%E5%86%85cdn%E6%85%A2%E7%9A%84%EF%BC%8C%E5%AE%83%E4%B8%BB%E8%A6%81%E5%BC%BA%E5%9C%A8%E9%98%B2%E5%BE%A1%EF%BC%89">https://blog.csdn.net/qq1345659844/article/details/141605565（如果你是被攻击了再用，平时国内不用cf，可以没必要搞自动切换，被攻击了自己优选几个ip挂上就行。再怎么优选也比国内cdn慢的，它主要强在防御）</a></p>
+</blockquote>
+<p><strong>cdn注意</strong></p>
+<p>1-用大厂服务最好存储桶和cdn用一个厂商的，因为存储桶的流量计费基本是：外网下行流量0.5/g，cdn回源流量0.15/g（买资源包外网0.35，cdn流量0.1）如果是同一个厂商，流量算回源流量就便宜很多。</p>
+<p>2-加入cdn后让宝塔网站日志显示真实ip，而不是cdn的ip</p>
+<p>这里是让网站日志显示正确ip，宝塔付费防火墙是有勾选cdn功能的，勾选后会自动识别真实ip</p>
+<blockquote>
+<p>在nginx配置文件中的keepalive_timeout ：xx s的下面添加如下配置即可。</p>
+<p>set_real_ip_from 0.0.0.0/0;<br>real_ip_header X-Forwarded-For; </p>
+</blockquote>
+<h2 id="cos存储桶"><a href="#cos存储桶" class="headerlink" title="cos存储桶"></a>cos存储桶</h2><blockquote>
+<p>大厂的存储桶和cdn你再怎么防御，总有攻击大佬能破的，为了防止一夜破产，最好别用，用了一定要设置封顶和流量限制等，如果存储通cos你没用腾讯的cdn去保护（因为腾讯云的高防cdn很贵），而是用的其他高防死扛cdn，那么只有这个cdn能保护cos（其余的什么cos防御，设置referer什么的都没用）；</p>
+<p>按理来说除了cdn提供商，其他人是不知道你的源存储通链接的，但是就是有大佬能搞到，万一被抓源存储桶的情况下就没办法去很好的限制cos速率，就更加要把各种告警都打开，比如微信，邮箱，电话告警都打开，被告警了直接关了服务，防止被刷。</p>
+<p>官方告警设置链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://console.cloud.tencent.com/monitor/alarm/policy/detail/policy-hivhx5ef?content=policydetail">https://console.cloud.tencent.com/monitor/alarm/policy/detail/policy-hivhx5ef?content=policydetail</a></p>
+<p>把cos存储通中的文件，在cdn中勾选全部缓存，尽量被刷流量也是刷小厂cdn的。</p>
+<p>腾讯云cos防刷终极方法：通过函数自己去监控cos流量，流量超过阈值就关闭服务，这个是腾讯云cos自己没有的功能<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.tencent.com/developer/article/2258668">https://cloud.tencent.com/developer/article/2258668</a></p>
+<p>tip：存储服务是没办法停止的，你只有设置为私有访问或者删了所有数据。</p>
+</blockquote>
+<p>存储服务最好和源服务器是同一地区，可以让网站更快，最好服务商也相同，可以节省一点流量。</p>
 <p>价格区间：2024.3一年1T的腾讯cos，首单优化我只花了120</p>
 <p>计费：流量费+存储费</p>
-<p>1-如果计量付费，记得开启防刷（防盗链，仅cdn的ip可访问等）</p>
-<p>2-不要把桶名暴露，要自定义配置一个域名去代替桶名。</p>
+<p>tips:存储通最好要和网站一样每天备份到本地电脑（产生流量费用）或者进行版本控制（产生容量费用），虽然大厂存储被黑的几率很小。</p>
+<p><strong>如何防刷：</strong></p>
+<p>1-防盗链，跨域访问cors设置（形式化设置一下，有人想攻击的话，防盗链什么Referer都可以伪造的）</p>
+<p>2-千万不要把桶名暴露，要自定义配置一个域名去代替桶名。</p>
+<p>腾讯云提供了两种方式。如下的方法1和2，两种方式用其中一个就行了，另一个不需要也用不了，因为cname会冲突，除非你是想配置两个自定义访问的子域名。</p>
+<p>1-自定义源站域名：比如你设置个pic.xxx.com,然后你在xxx.com的dns上配置好主机记录为pic，cname记录值为cos原始访问链接就行了。（必须设置共有读）</p>
+<blockquote>
+<p>这样只是隐藏了你的cos的原始存储桶链接，因为是共有读，如果黑客通过某个方法知道了你的cos存储桶原链接，可以一直请求刷你的原链接。而且其实没点用，人家就算不知道你的原始存储桶链接，直接刷你这个自定义源站链接是一样的。</p>
+</blockquote>
+<p>2-自定义cdn加速域名：配置加速域名为pic.xxx.com（前缀随便你设置的，反正就是用来以后提供这个链接访问cos内资源），然后腾讯云会分配加速域名pic的cname主机记录值，一般就是&lt;域名&gt;.cdn.dnsv1.com，然后他会在腾讯的cdn控制台自动为你设置源站为cos的原始访问链接。（设置私有读，私有读比较安全，但是必须用腾讯云的cdn，因为腾讯云他的cdn和cos之间后台设置了鉴权机制，相对于cdn每次访问都带了一个密码去访问，所以可以取到资源，其他人访问的话没有密码权限，无论怎么请求都是404，有cos原桶链接都没用）</p>
+<blockquote>
+<p>其实和方法1一样的原理，但是就是加了个cdn，让无法直接刷cos，而是先刷cdn，而cdn又有cc防护，达到保护cos的目的。</p>
+</blockquote>
+<p>3-当你站点用的不是腾讯云的cdn，因为腾讯云的cdn是不死扛第四层ddos的，所以我们基本上会接入小厂cdn去防御攻击，那么我们用方法1就行了，自定义源站的域名和我们的小厂cdn的加速域名一致就行了，比如都设置pic.xxx.com,然后小厂cdn中配置回源为cos原存储桶链接即可。这样小厂cdn照样可以保护我们的cos不被刷量，因为用户每次访问图片，都是通过pic.xxx.com,他是先请求了cdn，cdn没有图片才会请求我们的存储桶。</p>
+<p>防御原理和腾讯云cdn方法2一样，但是差了一点，因为小厂cdn和腾讯云cos之间没法去相互配合设置后台鉴权，设置腾讯的授权策略让小厂cdn访问很麻烦，所以无法开启私有访问，那么当你存储桶原请求链接暴露了，攻击者就可以跳过cdn去请求你的cos，就被刷了。所以千万别告诉别人你的存储桶原链接，还有不要去用方法1，方法一就是脱裤子放屁根本没用，要么你就直接用方法2或者3，否则会暴露你的存储桶原链接。</p>
+<p><strong>第3种方法的弊端</strong></p>
+<p>首先cos是不可能被cc打死的，因为本身cos就只会被刷量，它处理并不是动态请求。如你的cdn没有滑块人机验证等功能，可能防不住第七次的cc攻击，也就是过滤不了所有恶意动态请求，源服务器会被打动态请求宕机。（把国内cdn关了，开cloudflare就行）</p>
+<blockquote>
+<p>注意cloudflare你不是接入他的cdn就行了，你也得百度配点里面的策略，还有被打了手动去开5s盾。</p>
+</blockquote>
+<p>但是因为cos处理的是下载，不是动态请求，而且本身前面就加了一层cdn挡着，尽管这个cdn没有人机验证功能，也会分担流量和请求，所以cos是不会宕机的，遇到cc攻击只会被刷cdn和cos的流量。</p>
+<p>如何不被刷流量呢？</p>
+<p>1-你就花钱上一个有人机验证滑块验证等防御cc的cdn就行了，这样cdn流量和cos流量都不会被刷。</p>
+<p>2-通过ns将主域名接入cloudflare，这样按理说应该是可以的，但是貌似cos无法接受cf无限回源，也就是说cf无法保护国内你在腾讯云阿里云买的存储桶，而且ns接入cf会导致国内dns解析和生效缓慢，所以如果你是一个注重用户体验的产品，不推荐这个，如果你不注重用户体验你直接全站接入cf，存储也用cf的存储桶就行了。</p>
+<p>3-通过原先提到的中转域名跳板的方式让域名接入cf的方式一样，让cos也通过cname接入cf，这样就不需要ns接入cf了，也不存在dns解析速度的问题了，但是这貌似根本就行不通，一是国内腾讯cos等存储桶好像不接受cf无限回源，再者好像根本搞不了。</p>
+<p>4-接入多个cdn，没用的，因为cdn死扛本来就不会宕机，问题出在没用滑块验证，被刷流量，你接入无数个cdn一样会被刷</p>
+<p>5-套两层cdn，第一层是死扛第四层的cdn但是没用滑块验证，第二层套上海云盾cdn，不死抗但是有滑块验证，这样就又能死扛又能防止cc了。首先上海云盾有速率限制，但是按道理确实可以用，不过免费的cnd的waf终究效果不好，而且操作起来很麻烦，两层cdn速度也慢了，还不如直接接入cf。</p>
+<p>如果说先第一层接入cf，第二层国内cdn，也是愚蠢至极，这还不如直接接入cf。</p>
+<blockquote>
+<p>所以只有方法1可行，搞个有人机验证的cdn就行了，如果实在不想搞，那被cc攻击了，动态请求的防护就通过关闭国内cdn开启cloudflare解决，防止源站被动态请求打宕机。cos的防护没办法的，但是不会被打死，只会被刷流量（加速cos的国内cdn不要关，还可以为cos分担流量）</p>
+<p>买死扛的带有人机验证的cdn，cdn和cos防刷都解决</p>
+<p>或者牺牲一点速度，动态防御用cf和宝塔自带的nginx免费防火墙，cos就让它刷，如果刷的钱少于买人机验证的钱，就让他刷，牺牲一点动态请求的速度而已。如果超过了人机验证的钱，就买人机验证，速度和防刷都解决。</p>
+<p>或者牺牲速度全站接入cf</p>
+<p>三个方法可以保证可用性</p>
+<p>(这三种方法都是cdn层面，你服务器层面也可以配合免费waf防cc，服务器层面防住不了刷cdn和cos，但是可以保护源服务器)</p>
+<p>1-买死扛和带cc人机验证的cdn；<br>2-买死扛不带人机验证cdn，cdncos流量让他刷；根本成本来决定1还是2<br>3-牺牲速度，全部接入cf,存储桶也用cf的</p>
+<p>其实宝塔专业版也有人机验证，但是只是防止源站被cc击落，不防cdn和cos被刷。</p>
+</blockquote>
+<p>平时和小学生攻击的话</p>
+<p>第四层攻击：平时随便挂个死扛cdn就行。第七层攻击：设置宝塔nginx免费防火墙60s内请求同一个url多少次就封等和禁国外ip完全够用了。cos和cdn刷量：配置自定义域名，cdn保护cos不暴露源存储桶域名即可，小学生一般没资源去刷量。</p>
+<blockquote>
+<p>其实宝塔自带的nginx付费防火墙（一般被攻击的时候速率限制60s30次，正常用户也能保证访问）（没钱买你去找一下宝塔开心版，有纯免费的如bt.sy，也有tb上他们破解后加入自己授权机制卖的，但是破解版小心后门，需要找那种用户量大的，因为各大牛都分析了，就大概逻没有后门，但是还是有风险不建议使用嘿嘿）还可以，但是如果你是轻量云等一些配置低带宽低的服务器，还是防不住攻击的，因为虽然它把带宽拦截了，但是如果你用了cdn，那么所有恶意请求其实通过了第四层到了第七次的nginx才被拦截（因为第四层看的是实际请求ip，你给攻击者封ip没用，他的请求其实是通过cnd的ip代理的），其实已经建立了连接，只是建立后返回了4xx的请求，攻击者请求多，你拒绝也得占用资源，还有建立了连接也有ssl握手，也得产生流量，这些流量在宝塔监控面板不显示，但是是存在的；所以即使拦截，你的服务器也顶不住，所以最好是带waf防火墙的cdn在前面顶。</p>
+</blockquote>
+<p>有点水平的攻击：</p>
+<p>第四层：死扛cdn就行。第七层：开启cf，设置宝塔nginx免费防火墙和cf的策略和五秒盾。cos和cdn刷量：cdn保护cos，一般cc攻击也刷不了量，都是打请求。如果被刷，刷的少就随缘，刷的多就买带人机验证的cdn去保护cos，或者买个高防被打秒解高带宽高存储的机子，直接不用cdn和cos。kuai</p>
+<blockquote>
+<p>cf可以优化优选节点，让国内访问更快，但是再快肯定也没有国内cdn快</p>
+</blockquote>
+<p>高手付费攻击：没钱就全部接入cf死扛，存储桶也用cf的，访问速度慢而已。有钱就上更好的死扛高防cdn人机验证waf套餐（还可以上定制的人机验证更稳）去保护网站和cos，源站上带waf的高防高配高带宽服务器（比如什么十堰高防）。</p>
+<p>上个800g源站高防，再来个单节点全800g高防cdn，定制访问人机验证和各种cc请求人机验证，藏好源ip，我不信有人能压你。</p>
+<p>最牛逼攻击：这种攻击基本上，我们个人站长自己运维是处理不过来的，他会有专人去找你网站的各种漏洞，比如cc攻击也是盯着那种耗资源最多的接口攻击，然后你有防火墙策略，他有绕过策略，你人机验证，他也写脚本实现自动化等等。这种就找知道创宇等这种专业网络安全公司，几万一年包你无忧。</p>
+<blockquote>
+<p>其实也不用担心，有cdn死扛第四层也差不多了，因为普通的cc攻击基本上是动态请求，动态请求一般人没法刷量攻击一直刷你流量，因为你封了国外访问，刷量攻击是需要真实ip和我们的ip建立连接的（动态请求同样要真实ip，只是刷量得消耗流量，资源消耗更大，所以一般cc攻击也是动态请求，并不一直刷你流量），因为国内没那么多肉鸡ip和流量攻击你，除非人家花钱攻击你，你值得别人花钱，说明你也有钱，你上更好的防御就行了，他的攻击成本可能比你防御成本还高。</p>
+<p>但是动态请求就能把我们服务器打死了，但是这个打死只是cpu等爆满，并不会被服务商比如腾讯云拉入黑洞，攻击结束后十多分钟服务器就恢复了，一般小学生用的免费攻击也就几分钟攻击时间，如果你业务不打，大不了宕机十多分钟，业务大你上人机验证就行了，也不差这点钱。其中也有免费的一直打的cc攻击，但是流量很小，你封个海外ip，然后配点免费的waf，然后小厂cdn也有基本的waf，也能防住。</p>
+</blockquote>
+<blockquote>
+<p>当你的源ip没有暴露（暴露了可以联系厂家换ip），别人ddos攻击你，其中第四层攻击udp tcp等各种大流量协议都是打的ip，不能直接攻击你的服务器，而是攻击的cdn的节点服务器；基于http协议的cc攻击才是争对你域名动态请求的攻击；大厂cdn给你接入cdn，当你遇到攻击，大厂会根据为你提供的节点ip和被攻击的ip进行一系列对比，从而知道是你的域名网站引来的攻击，如果你没买ddos独立防御，为了保证充足的防御资源，就会把你的网站暂时撤离cdn服务了，不会帮你抗第四层攻击。</p>
+<p>而小厂cdn，也许他总共就那么50个节点ip，所有用户公用的，他根本没办法知道是哪个客户的域名被攻击了，可以根据哪个客户网站有大量cc的动态请求初步判断，但是也不能凭这个就乱封不是，所以不会把你拉入沙箱（有的小厂cdn也拉沙箱），他只能用自己的资源去硬抗，这并不代表小厂比大厂好，只是小厂的资源被你们所有用户共享，他赌的就是不会同时多个客户被攻击，当多个客户被攻击，他cdn直接全挂了。</p>
+<p>相对于小厂是群防，所有人共享防御，不是个防，所以便宜，万一一个用户被大佬攻击，可能还影响到其他用户。</p>
+<p>而知道创宇和白山这种，节点特别多，一个域名给一百个cdn节点，专门防御的，即使你没买独立ddos防御，一般也不会把你拉入沙箱，因为那么多节点一般流量根本打不动，根本不痛不痒。而且他也不好判断谁被攻击了，但不是说他们比腾讯云阿里云资源多，只是说策略不同。</p>
+</blockquote>
+<blockquote>
+<p>如果你的站很大，买了普通的人机验证等等防护没用，接入cf也没用，需要保证业务的100%稳定，那就花几万每年买知道创宇和白山那种专业防护就行，上定制人机验证和各种策略，还有渗透防护等各种功能，基本上解决所有网络攻击。</p>
+<p>你还可以像宝塔独立waf一样，部署一台独立服务器（注意带宽要大于源服务器，木桶效应）专门中转流量做waf（和反代防御虽然原理不同，但是功能差不多）；其次你源服务器也可以购买高防ip服务器，源服务器自带强力waf，其次再防不住流过来一点恶意请求，因为你源服务器本身高防而且资源配置高，所以根本就不怕了。</p>
+</blockquote>
+<blockquote>
+<p>什么宝塔自带的nginx防火墙，什么开源防火墙，那些防护cc的规则也不是说没用，但是只能防护一些小型cc攻击，大点的攻击还是得人机验证，只是小白刚开始是了解这些防火墙。其次即使waf带有人机验证等或者能防住cc，也建议在cdn层面就把攻击拦住，因为即使源站有waf能防御cc攻击，也消耗源服务器的部分资源不是。</p>
+</blockquote>
+<p><strong>宝塔的nginx防火墙需要给cdn加上白名单吗？会不会因为cc防护规则，封cdn的ip</strong></p>
+<blockquote>
+<p>注意，你源站服务器上安装的防火墙什么cc策略比如单ip访问url30次就拉黑，这些策略对cc有点点用，不过一定记得要把cdn的所有ip拉入白名单，不然他会把cdn也拉黑，有的cdn节点是智能分配的不是固定的，你可以联系cdn厂家为你提供动态接口获取动态cdn的ip，动态拉入白名单。（如果防火墙没有识别cdn中header以此知道真正请求者的功能，就需要给cdn加上白名单，这样的话所有请求也都会算是cdn在请求，然而cdn又是白名单，那这个防火墙直接失效了，所以一般防火墙都有识别header的功能的）</p>
+<p>经过测试niginx防火墙不需要将cdn的ip拉入白名单，因为cdn通常会设置请求头header中的real_ip_header和forward参数，nginx可以从此参数知道真正请求者的ip，虽然请求者的请求是通过cdn请求的，但是这次请求仍然会算是请求者在请求，而不是算cdn的ip在请求，所以即使触发cc防护规则，封的是请求者的ip而不会是cdn的ip。也就是说nginx防火墙通过cdn请求的header知道真正的请求者ip。举一反三即使你给cdn的ip加上白名单，那么请求者通过cdn的ip（在白名单内）频繁请求也会被封的（封请求者，cdn本就不会封，而且它在白名单内，更加不会封）。</p>
+</blockquote>
+<blockquote>
+<p>那么攻击者会不会伪造自己是cdn，欺骗防火墙，然后伪造header，以达到带入大量恶意流量？</p>
+<p>目前我没遇到过，我们配置cdn的时候都上传了证书，应该有验证的，伪造不了，我自己cc攻击测试的时候也没遇到过这种伪造。</p>
+</blockquote>
+<p><strong>服务器自带的firewall防火墙取的是请求者的哪个ip？</strong></p>
+<p>我此前设置过移除服务器的http和https服务，也就是说所有人不能访问我的服务器打开我的网站，但是我设置了cdn的白名单在firewall，此时网站是正常访问的，以此可以知道在firewall所有的请求ip就是算的当前实际请求的ip，不会和nginx防火墙一样去看什么header去得到真实请求者的ip。否则如果是去得到真实请求者的ip，我是禁止他们访问的，网站怎么会正常打开呢。</p>
+<p>宝塔面板中的网站的日志也是显示当前实际请求ip，不会去分析什么header</p>
+<p><strong>cos存储桶配置</strong></p>
+<p>1-按照各大厂商的防御机制都配置一下。</p>
+<p>2-加入图片压缩，比如图片上传到cos中，自动把图片全部转为webp格式，可以节省流量，用户访问也快。（有的cdn也有自动下发用户为webp格式图片，但是你cos下发给cdn的还是jpg等，不能节省cos流量）</p>
+<blockquote>
+<p>腾讯云cos的图片处理是通过用户访问的时候转化为webp，用户每次访问都得计费，cos存储的还是jpg等。如下方法可以直接把cos内存的就是webp，那么用户直接访问的也是webp，所以收费一次即可。</p>
+<p>数据万象，用户上传图片到cos自动存储为webp格式，<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.tencent.com/document/product/460/46488">https://cloud.tencent.com/document/product/460/46488</a></p>
+<p>看不懂就开工单</p>
+</blockquote>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1-在修改东西之前一定要备份，要清楚的找到自己修改了什么，步骤都要日志记录。</p>
 <p>2-nginx防火墙，各种插件防CC，防渗透插件等，cdn防火墙，这些功能的使用要清楚基本原理，否则互相冲突，正常访问都禁止了，你也不知道谁禁的，那就麻烦了。（比如要给cdn的ip加白名单，否则防火墙会拦截。）</p>
 <blockquote>
@@ -1024,34 +1208,119 @@
 <p>不对，很明显源服务器虽然只和cdn通信，但是源服务器的cc防火墙也能拦截客户端ip（因为cdn会把客户端ip当作参数传给源服务器），兼容的防火墙就能通过参数再去防御（限速封禁ip等）。</p>
 </blockquote>
 <p>3-cdn厂商一定要正规或值得信任，因为接入cdn解析，其实用户访问你域名获取的资源，cdn厂商是可以控制的。</p>
-<h3 id="被攻击紧急措施"><a href="#被攻击紧急措施" class="headerlink" title="被攻击紧急措施"></a>被攻击紧急措施</h3><p>1-如果遇到长时间的ddos，且自己无法解决，为了防止百度等搜索引擎降低seo权重和k站，可以在百度平台提交闭站保护。</p>
-<p>2-创建一个静态页面挂载在github或者gitee或者vercel上，让用户有起码的页面显示，（一般有月流量限制），ddos最多刷量，但是刷一个换个号继续部署就行。</p>
-<p>3-全站接入cf，禁止国外访问，源站只允许cdn访问，如果需要国内高速访问就接入国内带有滑块验证的cdn。</p>
+<h3 id="被攻击紧急措施"><a href="#被攻击紧急措施" class="headerlink" title="被攻击紧急措施"></a>被攻击紧急措施</h3><p>你得理解所有攻击，分析出自己的问题，是漏源站了，还是被cc了，根据情况去防护。</p>
+<p>1-如果遇到长时间的ddos，且自己无法解决，为了防止百度等搜索引擎降低seo权重和k站，可以在百度平台提交闭站保护。</p>
+<p>2-创建一个静态页面或者通过小飞兔等软件把网站页面以静态的方式都爬取下来；然后挂载在cloudpage或github或者gitee或者vercel上，让用户有静态页面显示，只是不能交互了，（一般有月流量限制），ddos最多刷量，但是刷一个换个号继续部署就行。</p>
+<p>这是没钱的学生做法，实际上，保存静态访问很简单，你随便上个cdn，cdn把动态请求关了（比如设置？参数后全部忽略，基本上源站不会被死的，目的相对于全部让cdn去提供服务了，源站只下发一次静态资源给全国各地的cdn节点）</p>
+<p>3-平时接入国内cdn线路为默认，接入cf为境外ip服务，当被攻击了，国内没有人机验证的cdn如果防不住cc，就全站接入cf，也就是说国内cdn直接关了，把cf全站接入，禁止国外访问，源站只允许cdn访问。如果需要国内高速访问就花钱接入国内带有滑块验证等人机验证的的cdn。</p>
+<p>tips：同一个主机记录，比如主机记录为www,类型为cname，可以设置多个不同的记录值的，线路也可以一样，也就是说可以同时接入多个cdn，dns系统一般会选择最好的一个cdn节点为用户提供服务。</p>
 <blockquote>
-<p>这还能被打死，肯定是付费攻击，站点没价值就上个cf硬抗，卡就卡吧。如果站点有价值，就上更好的cdn，不停的变换人机验证方式。</p>
+<p>这个只是分担第四层流量，第七次的请求攻击，如果这些cdn没cc策略，你接入一万个都是一样会c到你源服务器。</p>
 </blockquote>
-<p>4-如果源站泄露，找到泄露点修复，再更换源ip</p>
+<p>4-如果源站泄露，找到泄露点修复（比如ssl证书泄露），再更换源ip</p>
+<p>5-<strong>禁止国外访问，封国外</strong></p>
+<blockquote>
+<p>禁国外是在服务器防火墙层面设置，或者nginx层面，也可以叫cdn封国外；但是在dns封国外没用的，比如你设置个线路境外，返回127.0.0.1，这根本没用，因为dns解析是可以改的。攻击者发现回环了，可能自定义dns解析去攻击你。(当然这是攻击者针对攻击你，小学生用tg的机器人攻击你，没这自定义dns解析的功能)</p>
+</blockquote>
+<p>6-源站设置只允许cdn访问，也就是说把cdn的ip全部加入白名单，其他的直接移除http和https访问。</p>
+<blockquote>
+<p><strong>再次提醒，你必须熟悉各应用如dns，cdn，cos，服务器防火墙，nginx防火墙和各自waf防火墙是部署在哪作用于哪的，如你得知道用户访问你的网站，流量的一步一步是怎么走的，如流量到源站肯定先过服务器防火墙再到nginx防火墙等等，否则搞着搞着网站就出问题打不开了或者各种问题。。</strong></p>
+<p>再比如宝塔nginx防火墙付费版就有人机验证waf，但是这个是保护源站的，防止不了cdn被刷量，因为不是cdn的waf，如果你不懂流量走的过程的话，就可能会白买。</p>
+<p>其次各大平台配置等大同小异，但是可能有点不一样，建议用功能的时候先看文档，如nginx防火墙等防火墙的白名单肯定是白名单成员不受防火墙的策略限制，比如nginx的cc封禁规则不会封白名单ip，其他用户正常访问也不会拦截，只在触发规则后拦截。但是如果是cdn控制台有一个白名单，比如UA白名单和referer白名单，有可能你设置了，就是只能白名单访问，其他访问者直接是拒绝访问。遇到网站大不了，可以看看是被cdn拦截还是服务器拦截，去分析就行。</p>
+</blockquote>
+<p>7-如果你的业务正规，你可以和另一个公司签一个合同什么的金额写100w（如果你公司网站没有价值，叔叔不管），侧面证明你的网站价值100w，封国外访问，然后被攻击了，直接报警和报网安，直接上门抓人。</p>
+<p>8-如果你的cdn和cos被刷欠费，你可以去说明情况，争取减免费用或者减免一半或者三分之二的费用。</p>
+<p>9-如果你的服务器被打死了，无法解封，你要保证服务，那么你可以直接用备份恢复到其他服务器即可，如果没有备份，如果你是大厂服务器，你可以通过镜像（永远服务器内所有内容和环境）去恢复，大厂封服务器期间也是可以生成镜像的。</p>
 <h2 id="短信防刷"><a href="#短信防刷" class="headerlink" title="短信防刷"></a>短信防刷</h2><p>1-在服务商控制台或者本身程序前后端，限制IP和设备和手机号码上限，这些都是基本操作，应该只是增加攻击成本，对大佬来说基本上没啥用，实现自动刷只是时间问题。（有总比没有好，起码增加了攻击成本和门槛）</p>
-<p>2-最后的关键点在于使用一个无法自动识别通过的人机识别交互，比如滑块识别验证码等。</p>
+<p>2-最后的关键点在于使用一个无法自动识别通过的人机识别交互，比如滑块识别验证码等。接入极验。</p>
 <blockquote>
 <p>传统的验证码识别，现在有打码技术，所以需要选用最新的人机交互识别。只要攻击者必须人工识别验证码，无法自动化攻击，那么他也就不会攻击了，因为他的人工成本比我们还高。</p>
 </blockquote>
-<h2 id="站点优化"><a href="#站点优化" class="headerlink" title="站点优化"></a>站点优化</h2><p><strong>站点速度分为，解析速度+连接速度+下载速度+重定向所需时间</strong></p>
+<h2 id="站点优化"><a href="#站点优化" class="headerlink" title="站点优化"></a>站点优化</h2><p>1-<strong>站点速度分为，解析速度+连接速度+下载速度+重定向所需时间</strong></p>
 <p><strong>解析速度：</strong></p>
-<p>1-dns解析，这个没办法，一般麻烦的也够用了，你想更快就得去买付费的dns解析，比如四五十一年的那些，在域名服务商解析控制台那里就可以买。</p>
+<p>dns解析，这个没办法，一般麻烦的也够用了，你想更快就得去买付费的dns解析，比如四五十一年的那些，在域名服务商解析控制台那里就可以买。</p>
 <p><strong>连接速度：</strong></p>
-<p>1-加入cdn，找个稳的好用的cdn</p>
+<p>加入cdn，找个稳的好用的cdn</p>
 <p><strong>下载速度：</strong></p>
-<p>1-无论再怎么优化站内文件，也和你的服务器配置带宽，和cdn的带宽，和对象存储的带宽等配置相关。</p>
-<p>2-视频统一无损压缩一次，大视频单独进行m3u8切片处理。</p>
+<p>无论再怎么优化站内文件，也和你的服务器配置带宽，和cdn的带宽，和对象存储的带宽等配置相关。</p>
+<p>视频统一无损压缩一次，大视频单独进行m3u8切片处理。</p>
 <blockquote>
 <p>小视频没必要进行m3u8切片处理，因为mp4本身也有类似切片的功能，一段1min的视频，大概会切成5份，每份20s，也够用了；进行切片分成如100份,反而画蛇添足。</p>
 </blockquote>
-<p>3-图片输出为webp（cdn中一般有）</p>
+<p>图片输出为webp（cdn中一般有，cos中也有，或者wp插件也有，但是作用的地方不同，根据需求选择）</p>
 <p><strong>重定向：</strong></p>
-<p>1-一般我们会把主域名，比如通过宝塔网站重定向功能，将baidu.com的访问重定向到<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.baidu.com,这样有利于seo.除此之外的重定向基本都是多余的,我们根据自身情况去优化.可以去网站itdog.cn去查看自己网站的重定向次数./">www.baidu.com，这样有利于seo。除此之外的重定向基本都是多余的，我们根据自身情况去优化。可以去网站itdog.cn去查看自己网站的重定向次数。</a></p>
+<p>一般我们会把主域名，比如通过宝塔网站重定向功能，将baidu.com的访问重定向到<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.baidu.com%EF%BC%8C%E8%BF%99%E6%A0%B7%E6%9C%89%E5%88%A9%E4%BA%8Eseo%E3%80%82%EF%BC%88%E4%B8%8D%E8%A6%81%E5%9C%A8dns%E4%B8%AD%E7%9B%B4%E6%8E%A5%E7%94%A8cname%E9%85%8D%E7%BD%AE@到www,没用,不推荐,至于无所谓我知识有限)除此之外的重定向基本都是多余的,我们根据自身情况去优化.可以去网站itdog.cn去查看自己网站的重定向次数./">www.baidu.com，这样有利于seo。（不要在dns中直接用cname配置@到www，没用，不推荐，至于无所谓我知识有限）除此之外的重定向基本都是多余的，我们根据自身情况去优化。可以去网站itdog.cn去查看自己网站的重定向次数。</a></p>
+<p>2-什么nginx优化配置，比如zstd压缩比设置为6，还有那个配置文件内的详细设置，你如果懂，可以自己参考优化；mysql优化配置，还有服务器swap等都可以百度设置一下。</p>
+<blockquote>
+<p>参考链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.zibll.com/forum-post/16745.html">https://www.zibll.com/forum-post/16745.html</a></p>
+</blockquote>
+<p>3-使用quic协议的http3，让网站速度更快。20240920，这个时间点支持http3的nginx，宝塔官方是没有的，需要自己去nginx官方找，然后通过防火墙命令安装。如果你用了cdn，cdn也得支持http3才行。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/687534490">https://zhuanlan.zhihu.com/p/687534490</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhujib.com/document/10050.html">https://zhujib.com/document/10050.html</a></p>
+</blockquote>
+<p>4-加入图片压缩，比如图片上传到cos中，自动把图片全部转为webp格式，可以节省流量，用户访问也快。（有的cdn也有自动下发用户为webp格式图片，但是你cos下发给cdn的还是jpg等，不能节省cos流量）</p>
+<blockquote>
+<p><strong>上传时转化：</strong></p>
+<p>方法一：</p>
+<p>数据万象，通过数据工作流的方式，检测到cos中有新图片上传过来。自动生成一个webp格式的图，文档：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.tencent.com/document/product/460/46488%EF%BC%88%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BD%A0%E4%BB%AC%E6%88%91%E4%BB%AC%E8%BF%98%E5%8F%AF%E4%BB%A5%E5%8A%A0%E5%85%A5%E6%B0%B4%E5%8D%B0%E6%88%96%E8%80%85%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C%EF%BC%8C%E8%87%AA%E5%B7%B1%E5%8E%BB%E7%A0%94%E7%A9%B6%E4%B8%8B%E6%96%87%E6%A1%A3%E5%8D%B3%E5%8F%AF%EF%BC%89">https://cloud.tencent.com/document/product/460/46488（工作流你们我们还可以加入水印或者其他操作，自己去研究下文档即可）</a></p>
+<p>工作流中用到的函数也计费的，但是我们是自己上传的图片转换一次就行了，费用基本忽略不计。</p>
+<p>缺点：当前我们用的wp插件上传后，用户上传的是jpg，访问链接就是jpg后缀，我们cos中虽然有了webp，d，但是用户前台访问的链接还是jpg的，需要额外配置用户前台访问图片的后缀。</p>
+<p>如何配置用户前台访问图片的后缀？如下代码加入到wp主题文件中的funtions.php的末尾即可</p>
+<blockquote>
+<p> //配合cos工作流使用，作用：将新上传的后缀为jpg，jepg，png的图片转化为.webp后缀链接，输出给前台用户&lt;开始&gt;<br>function modify_image_url_to_webp($url) {<br>       // 检查图片格式<br>    if (preg_match(‘/.(jpg|jpeg|png)$/i’, $url)) {<br>        // 替换后缀为 .webp<br>           $url = preg_replace(‘/.(jpg|jpeg|png)$/i’, ‘.webp’, $url);<br>       }<br>       return $url;<br>   }<br>   add_filter(‘wp_get_attachment_url’, ‘modify_image_url_to_webp’);<br>   //配合cos工作流使用，作用：将新上传的后缀为jpg，jepg，png的图片转化为.webp后缀链接，输出给前台用户&lt;结束&gt;</p>
+<p>如下代码只影响新上传的图片，如果你要所有图片都转为webp，那你得先把存储通内图片文件都转化一次，然后自己去研究一下代码，问gpt就像。</p>
+<p>注意工作流输出文件名字${InputName}_${RunId}.${ext}设置为${InputName}即可，否则用如上方法改了文件后缀，但是文件名称又不同。</p>
+</blockquote>
+<p>优点：只计费一次转化，cos中就存在webp图片，用户前台直接访问webp文件即可。</p>
+<p>方法二：</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.tencent.com/document/product/436/60453%E5%A6%82%E6%AD%A4%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E2%80%9C%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%84%E7%90%86%E2%80%9D%EF%BC%8C%E5%85%B6%E5%AE%9Ecos%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%87%E8%B1%A1%E6%8F%90%E4%BE%9B%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%98%AF%E6%94%AF%E6%8C%81%E4%B8%8A%E4%BC%A0%E7%9A%84%E6%97%B6%E5%80%99%E5%B0%B1%E8%BD%AC%E5%8C%96%E6%93%8D%E4%BD%9C%E5%9B%BE%E7%89%87%EF%BC%8C%E7%84%B6%E5%90%8E%E5%AD%98%E5%85%A5cos%E4%B8%AD%E7%9A%84%EF%BC%8C%E4%BD%86%E6%98%AF%E5%BD%93%E5%89%8Dwp%E7%9A%84cos%E6%8F%92%E4%BB%B6%E9%83%BD%E4%B8%8D%E6%94%AF%E6%8C%81%EF%BC%8C%E5%8F%AA%E8%83%BD%E8%87%AA%E5%B7%B1%E5%8E%BB%E5%86%99%E4%BB%A3%E7%A0%81%E5%86%99%E6%8F%92%E4%BB%B6%EF%BC%8C%E9%97%A8%E6%A7%9B%E9%AB%98%E3%80%82">https://cloud.tencent.com/document/product/436/60453如此文档中的“上传时处理”，其实cos中的数据万象提供的服务是支持上传的时候就转化操作图片，然后存入cos中的，但是当前wp的cos插件都不支持，只能自己去写代码写插件，门槛高。</a></p>
+<p><strong>下载时转化：</strong></p>
+<p>方法三：1-打开数据万象后，把前台用户的请求图片链接加上如：?imageMogr2/format/webp的参数即可，用户访问的就是webp图片。（现在Wordpress里面的cos插件基本都支持此功能）</p>
+<p>优点：简单，用插件开启就行了，不需要自己写代码配置。</p>
+<p>缺点：用户每访问一次，都调用了一次转化api，都要计费一次。</p>
+</blockquote>
+<blockquote>
+<p>如果你只要图片的水印和转化为webp功能，用方法三就行了，因为水印和webp功能属于基础图片处理，不是按次数计费，而是按流量计费，而且每个月送10tb流量，根本用不完。其他的高级图片处理，按照次数付费的那种，就用方法一和二。</p>
+<p>方法三，示例图片转为webp和加上水印：</p>
+<blockquote>
+<p>将水印文字内容进行URL安全的Base64编码。例如，”示例水印”编码后的字符串为5L2g5aW977yM5LiW55WM77yB。<br>将编码后的水印文字添加到请求URL中，如下所示：<br>1.png?imageMogr2/format/webp&amp;watermark/2/text/5L2g5aW977yM5LiW55WM77yB/fill/IzNEM0QzRA/fontsize/20/dissolve/50/gravity/SouthEast<br>其中：<br>watermark/2 表示当前的处理为文字水印。<br>/text/5L2g5aW977yM5LiW55WM77yB 是编码后的水印文字内容。<br>/fill/IzNEM0QzRA 表示水印文字颜色，这里使用的是黑色。<br>/fontsize/20 表示水印文字大小，这里设置为20像素。<br>/dissolve/50 表示水印透明度，这里设置为50%。<br>/gravity/SouthEast 表示水印位置为右下角。</p>
+<p>其中前面的的?imageMogr2/format/webp是转化为webp的参数，后面是水印参数，用&amp;连接，还有其他需求也用&amp;连接即可。</p>
+</blockquote>
+<p>计费和流量走向：设置用户前台看到的链接就是1.png?imageMogr2/format/webpcos（wp的插件都有这些功能），当用户请求上述链接后，cos先把图片转为webp，要消耗数据万象的基础处理的流量，然后下发给用户客户端，再占用cos下行流量。</p>
+<p>计费文档：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.tencent.com/document/product/460/58117">https://cloud.tencent.com/document/product/460/58117</a></p>
+<p>操作文档：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.tencent.com/document/product/460/6951">https://cloud.tencent.com/document/product/460/6951</a></p>
+</blockquote>
+<p>5-开启pwa功能，也就是用户断网了，还可以通过本地缓存访问网站，而且有提示用户安装浏览器的你的网站应用的功能。你是WP程序就直接插件搜<strong>PWA for WP</strong>    作者:<a target="_blank" rel="noopener external nofollow noreferrer" href="http://pwa-for-wp.com/">Magazine3</a> |</p>
+<p>6-大视频通过切片m3u8格式，或者直接设置用户上传视频大小，或者中小视频给用户提供一个在线视频压缩网站（没办法通过cos压缩，视频压缩太占性能了，cos不通过，以后提供了也很贵，我们服务器去压缩更加不可能）</p>
 <h2 id="证书部署问题"><a href="#证书部署问题" class="headerlink" title="证书部署问题"></a>证书部署问题</h2><p>1-如果是宝塔看到或服务器明确配置了新证书，但是用户访问就是原先过期的老证书，很可能是用的cdn服务商的证书没更新，需要联系cdn服务商。</p>
-<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><p>1-阿里云企业邮箱是可以批量发送信息给客户的，百度教程即可，但是能发没用，容易垃圾箱，像不垃圾箱可能得另外给保护费。</p>
+<p>2-现在大厂的免费证书都是三个月，而且只保护单域名，虽然每年可以申请二十张，但对子域名多的人来说，属实麻烦，其实有很多地方可以申请免费的三个月通配符证书。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.shangyexinzhi.com/article/19577653.html">https://www.shangyexinzhi.com/article/19577653.html</a></p>
+</blockquote>
+<h2 id="开发常见问题"><a href="#开发常见问题" class="headerlink" title="开发常见问题"></a>开发常见问题</h2><p>1-接入qq登录后，我发现百度打开网站qq登录成功后，不跳转回百度，导致登录失败，而其他浏览器可以。</p>
+<p>这是因为，大多数浏览器支持 OAuth 回调机制，所以可以正常回调到原浏览器登录，而我用的是百度极速版，它没做兼容，这也没办法，但是一般所有正式浏览器都是支持 OAuth 回调机制的。</p>
+<p>2-php和mysql必须编译安装，否则容易出错。（编译安装mysq都得2g内存往上的服务器，如果你就2g，最好先编译安装了mysql再安装其他软件，防止内存不够编译安装mysql）</p>
+<p>3-当你换了服务器ip，你原先用到的各方面配置，比如微信的公众号服务里面有一个ip白名单，也得改成你的新ip（平时最好把这些都记住，哪些要改）</p>
+<p>微信公众号验证码功能和自动回复等开发功能详情：</p>
+<blockquote>
+<p>但是如果你换了ip还是功能不起作用，或者提交开发者配置信息，提示：请求错误请稍后重试；可以去看看是不是网站有cdn或者防火墙的日志，应该是把微信的请求拦截了。没有拦截的情况下微信会发出如下路径的请求。 /oauth/weixingzh/callback</p>
+<p>亚洲 中国 上海】 175.24.214.222 - - [23/Sep/2024:11:21:56 +0800] ＂POST /oauth/weixingzh/callback?signature=aa237c3fe6b88cc15eed8b489485aefe7efc049e&amp;timestamp=1727061716&amp;nonce=1422432825&amp;openid=oFGSd6B5Kuf5jELoJdRdVX0N5pyU HTTP/1.1＂ 200 480 ＂-＂ ＂Mozilla/4.0＂</p>
+<p>流程：用户在公众号发送信息：验证码——-微信接收到用户信息，下发请求给你设置的域名回调地址——–你的回调地址服务器接收到请求，回应请求内容（当前服务器必须是微信设置的白名单内）——–微信接收到信息，将内容在公众号聊天框内发送给用户。</p>
+</blockquote>
+<p>4-qq登录后的回调页面，和易支付的支付后回调页面，提示页面不可访问和不存在，但是防火墙和cdn等没有拦截。</p>
+<blockquote>
+<p>去看看防盗链加上qq.com和支付域名试试，cdn的防盗链功能不仅是防止在网站内盗用图片，网站本身就是一个文件，也会被盗用，所以cdn的防盗链可能把文件下发给拦截了。</p>
+</blockquote>
+<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><p>tips：不要把网站密码给别人，你要知道各密码的轻重缓急，如：</p>
+<blockquote>
+<p>优先级一：服务器的ssh密码最重要，有这个密码，可以掌握服务器的所有东西，是系统层的最高权限，所以得安装ssh防爆破软件</p>
+<p>优先级二：宝塔的账户密码和独立端口和地址，这个密码可以修改你部署所有网站的任何东西，是软件层的权限。</p>
+<p>优先级三：数据库密码，这个可以修改你的程序的各用户密码，如果你是wp程序，他就能登录你的程序后台。</p>
+<p>优先级四：wp等程序管理员密码，此可以登录你的程序后台对你的某个网站进行修改。</p>
+<p><strong>优先级五</strong>：优先级五中的某些密码重要程度媲美优先级一，各种配置密码，比如百度内容审核的密钥，和阿里云等的访问控制权限密钥（非常重要），这些一般会记录在wp程序后台中，上述任何密码被被他人窃取进入，优先级五的这些配置密码也得修改。</p>
+</blockquote>
+<p>1-阿里云企业邮箱是可以批量发送信息给客户的，百度教程即可，但是能发没用，容易垃圾箱，像不垃圾箱可能得另外给保护费。</p>
 <p>2-百度竞价排名（<a target="_blank" rel="noopener external nofollow noreferrer" href="https://e.baidu.com/%EF%BC%89%E5%92%8C%E5%BF%AB%E6%8E%92,%E7%AB%9E%E4%BB%B7%E6%8E%92%E5%90%8D%E6%98%AF%E7%99%BE%E5%BA%A6%E5%AE%98%E6%96%B9%E7%9A%84%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%8A%B1%E9%92%B1%E4%B9%B0%E5%B9%BF%E5%91%8A%E5%B0%B1%E7%BB%99%E4%BD%A0%E6%8E%92%E7%AC%AC%E4%B8%80%E4%BD%8D%EF%BC%8C%E5%BF%AB%E6%8E%92%E6%98%AF%E9%BB%91%E5%B8%BDseo%E7%94%A8%E8%9C%98%E8%9B%9B%E6%B1%A0%E4%BB%80%E4%B9%88%E7%9A%84%EF%BC%88%E5%B0%8F%E6%97%8B%E9%A3%8E%E8%9C%98%E8%9B%9B%E6%B1%A0%E4%B8%80%E7%B1%BB%E6%88%96%E8%80%85%E6%A8%A1%E6%8B%9F%E7%82%B9%E5%87%BB%E5%90%84%E7%A7%8D%E7%AD%89%E7%AD%89%EF%BC%89%EF%BC%8C%E8%AE%A9%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E6%8E%92%E5%88%B0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%89%8D%E9%9D%A2%EF%BC%8C%E8%A2%AB%E7%99%BE%E5%BA%A6%E7%AE%97%E6%B3%95%E5%8F%91%E7%8E%B0%EF%BC%8C%E5%8F%AF%E8%83%BD%E4%BC%9A%E8%A2%ABk%E7%AB%99%E3%80%82">https://e.baidu.com/）和快排,竞价排名是百度官方的，也就是花钱买广告就给你排第一位，快排是黑帽seo用蜘蛛池什么的（小旋风蜘蛛池一类或者模拟点击各种等等），让你的网站排到搜索引擎前面，被百度算法发现，可能会被k站。</a> </p>
 <blockquote>
 <p>主要看你网站有没有人访问，如果访问的人多，买个快排让用户更好的搜到是可以的，后续有用户数据支撑，百度会维持你的排名，如果快排到前面，没用户点击，一旦不买快排了，又会掉下去。</p>
@@ -1069,6 +1338,40 @@
 </blockquote>
 <p>6-搜狗基本上凉了，如果长时间不收录网站，可以搜狗发邮箱</p>
 <p>7-购买了一个厂家的服务器，尽量dcdn和存储桶等服务也在同一个厂家购买，方便配置也可以节省些许流量，因为同厂商某些产品都在一个内网，数据交流不要钱。</p>
+<p>8-CORS 白名单主要用于控制跨域请求，允许特定域的客户端访问服务器的资源，适用于API和动态交互。<br>Referer 头更常用于静态资源的引用控制，例如限制其他网站直接引用你的图片或文件。</p>
+<p>9-腾讯云阿里云这些大厂凌晨都有客服，有问题去问就行。</p>
+<p>10-重装和迁移差不多：</p>
+<p>网站迁移<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1wt411N7Yd/%EF%BC%88%E5%88%AB%E7%9E%8E%E6%90%9E%EF%BC%8C%E9%87%8C%E9%9D%A2%E6%9C%89%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%EF%BC%8C%E6%AF%94%E5%A6%82%E5%A6%82%E6%9E%9C%E8%A6%81%E6%89%B9%E9%87%8F%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E9%87%8C%E9%9D%A2%E7%9A%84%E4%B8%9C%E8%A5%BF%EF%BC%8C%E8%A6%81%E7%94%A8%E6%8D%A2%E5%9F%9F%E5%90%8D%E5%B0%8F%E5%B7%A5%E5%85%B7(https://www.zibll.com/19369.html)%EF%BC%8C%E6%AF%94%E5%A6%82%E5%AD%90%E6%AF%94%E8%80%81%E5%94%90%E7%9A%84%EF%BC%8C%E5%90%A6%E5%88%99%E7%9B%B4%E6%8E%A5sql%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E4%BC%9A%E6%9C%89%E5%BA%8F%E5%88%97%E5%8C%96%E9%97%AE%E9%A2%98%E5%AF%BC%E8%87%B4%E4%BF%AE%E6%94%B9%E5%A4%B1%E8%B4%A5%EF%BC%89">https://www.bilibili.com/video/BV1wt411N7Yd/（别瞎搞，里面有注意事项，比如如果要批量改数据库里面的东西，要用换域名小工具(https://www.zibll.com/19369.html)，比如子比老唐的，否则直接sql直接修改会有序列化问题导致修改失败）</a></p>
+<p>11-cdnfly是一个cdn系统，就像卖云服务的都用智慧魔方系统搭建网站一样，cdnfly是卖cdn的人搭建cdn管理系统的。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://doc.cdnfly.cn/gongnengjieshao.html">https://doc.cdnfly.cn/gongnengjieshao.html</a></p>
+</blockquote>
+<p>12-宝塔面板地址是分大小写的，有时候面板打不开，看一下地址是不是大小写错了</p>
+<p>13-有时候你换了解析，ping还是有之前的ip，那是因为cdn的缓存</p>
+<p>14-宝塔防火墙和一类cdn防火墙，那种人机验证，都有他们自定义的页面，里面有产品引流，我们可以自己去改了。这只是一个html一样的东西改了没如何影响，防火墙的实际操作比如限流操作是在.lua文件内设置的。</p>
+<p>15-我们有时候设置ip地址白名单，发现设置了不起作用，有可能是你的ip变化了，我们的wifi等ipv4地址，前三位一般不变，但是第四位是经常动态分配的。</p>
+<blockquote>
+<p>所以我们可以设置ip段，如111.234.445.1/24或者111.234.45.1——111.234.45.255的形式添加白名单</p>
+</blockquote>
+<p>16-有的机房和cdn自称动态BGP，通俗来说就是他有这个，能让网络更快更稳定。</p>
+<p>17-云服务器:能动态提升改变配置和加流量，发布式架构，一台物理机子出问题，他可以调其他的资源来弥补；</p>
+<p>轻量云：也算云服务器，但是厂商限制了性能，也都是老机子（就像电脑分i3和i9），而且无法改变配置和流量；</p>
+<p>vps：通过一台物理机用虚拟化技术，分出很多个机子给大家使用，但是一台机子出问题，其分出的所有vps机子全部出问题。</p>
+<p>虚拟主机：用户没有系统权限，没办法主机安装某个环境比如换php版本，里面的环境和配置和软件都是固定的。</p>
+<p>区别：云服务器具有更高的稳定性，因为其采用了分布式架构和冗余备份策略，有效避免了单点故障。</p>
+<p>VPS的稳定性相对较低，因为其依赖于单台物理服务器。当物理服务器出现故障时，所有托管在该服务器上的VPS都会受到影响。</p>
+<p>tip：云服务器和轻量云和vps基本都有独立ip，但是虚拟主机基本上是共享ip，独立ip很少或者得额外付费。</p>
+<p>买服务器等不一定要大厂，但是买的厂家必须有公司和相关资质，小厂家为了利润经常超开超开，比如vps100g的母机只能开50台2g，有的厂商超开到60台，那就相当于实际每个人是跑不满的，只是把其他人没用的资源分配给其他用户使用。</p>
+<p>18-百度的内容审核接口，用户上传图片，图片先通过你程序设置的密钥上传到百度，百度返回是否通过，通过则再进入cos。</p>
+<p>19-源ip开启就是在提供访问服务的，不设置dns，只是让攻击者不知道源ip，所以无法攻击，但是攻击者溯源到了ip，就可以直接攻击了。</p>
+<blockquote>
+<p>可以在服务器防火墙层面设置只允许cdn节点访问，对方拿到你的源ip也没办法对你进行第四层ddos攻击，那么攻击就只能通过cdn的ip进来，进行第七次的cc的形式攻击，而cdn也有cc防护，所以第七层也攻击不了。</p>
+</blockquote>
+<p>20-远程连接服务器</p>
+<blockquote>
+<p>电脑打开cmd控制台或者git bash等控制台都可以，然后输入以下命令：<code>ssh username@server_ip_address</code>，其中<code>username</code>是您的用户名，<code>server_ip_address</code>是您的云服务器的IP地址。</p>
+</blockquote>
+<p>21-l</p>
 
                 
             </div>
@@ -1631,7 +1934,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">239.9k</span>&nbsp;字
+                class="white-color">253.5k</span>&nbsp;字
             
             
             
